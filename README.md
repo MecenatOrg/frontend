@@ -14,7 +14,7 @@ You will also see any lint errors in the console.
 
 ### `npm lint`
 
-If you decide to commit your changes, it will be good to check you code! ^^
+If you decide to commit your changes, it will be good to check your code! ^^
 
 ### `npm test`
 
