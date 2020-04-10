@@ -3,28 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "typescript": "~3.7.2",
     "axios": "^0.19.1",
     "classnames": "^2.2.6",
     "history": "^4.10.1",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.1",
-    "react-redux": "^7.1.3",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.0",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
     "redux": "^4.0.5",
-    "redux-saga": "^1.1.3",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
     "source-map-explorer": "^2.2.2",
-    "typesafe-actions": "^5.1.0"
+    "styled-components": "^5.1.0",
+    "typesafe-actions": "^5.1.0",
+    "typescript": "~3.7.2"
   },
   "scripts": {
     "start": "PORT=3003 react-scripts start",
@@ -33,6 +29,36 @@
     "lint": "tsc --noEmit && eslint '*/**/*.{ts,tsx}' --quiet --fix",
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer 'build/static/js/*.js'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "\"lint-staged\" \"npm run test\""
+    }
+  },
+  "lint-staged": {
+    "**/*.ts{,x}": [
+      "eslint --fix",
+      "stylelint --config .stylelintrc.json",
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.json": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.js": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.scss": [
+      "prettier --write",
+      "stylelint",
+      "git add"
+    ],
+    "**/*.md": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -50,26 +76,37 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.1.1",
-    "@testing-library/react": "^9.4.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^8.1.1",
     "@types/classnames": "^2.2.9",
     "@types/history": "^4.7.5",
     "@types/jest": "^24.9.1",
     "@types/lodash": "^4.14.149",
-    "@types/node": "^13.7.1",
-    "@types/react": "^16.9.19",
-    "@types/react-dom": "^16.9.5",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-bootstrap": "^1.0.0",
+    "@types/react-dom": "^16.9.0",
     "@types/react-redux": "^7.1.7",
     "@types/react-router-dom": "^5.1.3",
     "@types/redux": "^3.6.0",
+    "@types/styled-components": "^5.0.1",
     "@typescript-eslint/eslint-plugin": "^2.19.2",
     "@typescript-eslint/parser": "^2.19.2",
     "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
+    "husky": "^4.2.5",
     "jest": "^24.9.0",
-    "prettier": "^1.19.1"
+    "lint-staged": "^10.1.3",
+    "prettier": "^1.19.1",
+    "redux-devtools-extension": "^2.13.8",
+    "stylelint": "^13.3.1",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
+    "ts-jest": "^25.3.1"
   }
 }
