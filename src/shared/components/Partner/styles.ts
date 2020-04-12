@@ -4,7 +4,7 @@ export const PartnerWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 258px;
+  width: 100%;
   height: 140px;
   &:hover {
     box-shadow: 0px 20px 30px rgba(233, 229, 221, 0.6);
