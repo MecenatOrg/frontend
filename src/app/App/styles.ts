@@ -7,6 +7,7 @@ export const AppWrapper = styled.div`
   button,
   input,
   textarea {
+    outline: none;
     &:hover,
     &:focus,
     &:active {

@@ -21,12 +21,12 @@ const SearchBar: React.FC<SearchBarProps> = (props: SearchBarProps) => {
             <FormWrapper>
               <Form>
                 <LabelIcon>
-                  <SearchIcon width="12px" height="12px" />
+                  <SearchIcon />
                 </LabelIcon>
                 <input type="text" placeholder="що вас цiкавить?" autoFocus />
               </Form>
               <ButtonClose onClick={onToggleSearchBar}>
-                <CloseIcon width="34px" height="34px" />
+                <CloseIcon />
               </ButtonClose>
             </FormWrapper>
           </Col>

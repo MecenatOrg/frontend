@@ -18,7 +18,7 @@ const Header: React.FC<NavigationProps> = (props: NavigationProps) => {
       <ul>
         <li>
           <SearchButton onClick={onToggleSearchBar}>
-            <SearchIcon width="12px" height="12px" />
+            <SearchIcon />
             Пошук
           </SearchButton>
         </li>
