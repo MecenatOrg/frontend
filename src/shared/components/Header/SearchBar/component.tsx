@@ -1,8 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { SearchBarWrapper, LabelIcon, FormWrapper, ButtonClose } from './styles';
-import SearchIcon from '../../../icons/Search';
-import CloseIcon from '../../../icons/Close';
+import { SearchBarWrapper, LabelIcon, FormWrapper, Form, ButtonClose } from './styles';
+import { SearchIcon, CloseIcon } from '../../../icons';
 
 type SearchBarProps = {
   isOpenSearch: boolean;
@@ -18,16 +17,18 @@ const SearchBar: React.FC<SearchBarProps> = (props: SearchBarProps) => {
     <SearchBarWrapper className={props.isOpenSearch ? 'active' : 'close'}>
       <Container>
         <Row>
-          <Col className="d-flex justify-content-between">
+          <Col>
             <FormWrapper>
-              <LabelIcon>
-                <SearchIcon width="12px" height="12px" />
-              </LabelIcon>
-              <input type="text" placeholder="що вас цiкавить?" autoFocus />
+              <Form>
+                <LabelIcon>
+                  <SearchIcon width="12px" height="12px" />
+                </LabelIcon>
+                <input type="text" placeholder="що вас цiкавить?" autoFocus />
+              </Form>
+              <ButtonClose onClick={onToggleSearchBar}>
+                <CloseIcon width="34px" height="34px" />
+              </ButtonClose>
             </FormWrapper>
-            <ButtonClose onClick={onToggleSearchBar}>
-              <CloseIcon width="34px" height="34px" />
-            </ButtonClose>
           </Col>
         </Row>
       </Container>

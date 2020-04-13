@@ -30,6 +30,7 @@ export const SearchButton = styled.button`
   border: 0;
   background-color: transparent;
   color: #000;
+  font-weight: 500;
 `;
 
 export const ToggleMenu = styled.button`

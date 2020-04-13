@@ -29,6 +29,11 @@ export const LabelIcon = styled.label`
 
 export const FormWrapper = styled.form`
   display: flex;
+  justify-content: space-between;
+`;
+
+export const Form = styled.form`
+  display: flex;
   align-items: center;
   width: 100%;
   input {
