@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { SearchBarWrapper, LabelIcon, FormWrapper, Form, ButtonClose } from './styles';
 import { SearchIcon, CloseIcon } from '../../../icons';
+import classNames from 'classnames';
 
 type SearchBarProps = {
   isOpenSearch: boolean;
   onToggle(type: string): void;
 };
 
-const SearchBar: React.FC<SearchBarProps> = (props: SearchBarProps) => {
-  const onToggleSearchBar = (): void => {
-    props.onToggle('search');
-  };
+const SearchBar: React.FC<SearchBarProps> = ({ isOpenSearch, onToggle }: SearchBarProps) => {
+  const inputSearch = useRef<HTMLInputElement>(null);
+  const searchBarClasses = classNames({ active: isOpenSearch });
+  useEffect(() => {
+    if (inputSearch && inputSearch.current && isOpenSearch) {
+      inputSearch.current.focus();
+    }
+  }, [isOpenSearch]);
 
   return (
-    <SearchBarWrapper className={props.isOpenSearch ? 'active' : 'close'}>
+    <SearchBarWrapper className={searchBarClasses}>
       <Container>
         <Row>
           <Col>
@@ -23,9 +28,14 @@ const SearchBar: React.FC<SearchBarProps> = (props: SearchBarProps) => {
                 <LabelIcon>
                   <SearchIcon />
                 </LabelIcon>
-                <input type="text" placeholder="що вас цiкавить?" autoFocus />
+                <input ref={inputSearch} name="search" type="text" placeholder="що вас цiкавить?" />
               </Form>
-              <ButtonClose onClick={onToggleSearchBar}>
+              <ButtonClose
+                type="button"
+                onClick={(): void => {
+                  onToggle('search');
+                }}
+              >
                 <CloseIcon />
               </ButtonClose>
             </FormWrapper>

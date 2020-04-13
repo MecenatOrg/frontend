@@ -1,14 +1,4 @@
-import styled, { keyframes } from 'styled-components';
-
-const translateY = keyframes`
-  from {
-    transform: translateY(-100%)
-  }
-
-  to {
-    transform: translateY(0)
-  }
-`;
+import styled from 'styled-components';
 
 export const SearchBarWrapper = styled.div`
   position: absolute;
@@ -20,14 +10,18 @@ export const SearchBarWrapper = styled.div`
   align-items: center;
   background-color: #fff;
   z-index: 10;
-  animation: ${translateY} 0.3s both;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+  &.active {
+    transform: translateY(0);
+  }
 `;
 
 export const LabelIcon = styled.label`
   margin-right: 10px;
 `;
 
-export const FormWrapper = styled.form`
+export const FormWrapper = styled.div`
   display: flex;
   justify-content: space-between;
 `;

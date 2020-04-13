@@ -8,21 +8,21 @@ type NavigationProps = {
   onToggle(type: string): void;
 };
 
-const Header: React.FC<NavigationProps> = (props: NavigationProps) => {
-  const onToggleSearchBar = (): void => {
-    props.onToggle('search');
-  };
-
+const Header: React.FC<NavigationProps> = ({ menuList, onToggle }: NavigationProps) => {
   return (
     <Navigation>
       <ul>
         <li>
-          <SearchButton onClick={onToggleSearchBar}>
+          <SearchButton
+            onClick={(): void => {
+              onToggle('search');
+            }}
+          >
             <SearchIcon />
             Пошук
           </SearchButton>
         </li>
-        {props.menuList.map(item => {
+        {menuList.map(item => {
           return (
             <li key={item.name}>
               <a href={item.link}>{item.name}</a>

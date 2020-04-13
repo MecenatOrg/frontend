@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const HeaderWrapper = styled.header`
   position: relative;
-  display: block;
-  padding: 22px 0;
+  display: flex;
+  align-items: center;
+  height: 80px;
   z-index: 2;
 `;
