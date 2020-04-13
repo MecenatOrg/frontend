@@ -1,5 +1,4 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
 import { PartnerWrapper, ImageElement } from './styles';
 
 type PartnerProps = {
@@ -10,7 +9,7 @@ type PartnerProps = {
 const Partner: React.FC<PartnerProps> = (props: PartnerProps) => {
   return (
     <PartnerWrapper>
-      <ImageElement src={props.imageSrc} alt={props.imageAlt}></ImageElement>
+      <ImageElement src={props.imageSrc} alt={props.imageAlt} />
     </PartnerWrapper>
   );
 };

@@ -15,4 +15,8 @@ export const ImageElement = styled.img`
   display: block;
   width: 140px;
   height: auto;
+
+  @media (max-width: 576px) {
+    width: 88.45px;
+  }
 `;
