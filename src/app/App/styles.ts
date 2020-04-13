@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
 export const AppWrapper = styled.div`
-  font-weight: 16px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
 `;
