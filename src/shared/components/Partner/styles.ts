@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const PartnerWrapper = styled.div`
   width: 100%;
   height: 140px;
+  background: #ffffff;
   &:hover {
     box-shadow: 0px 20px 30px rgba(233, 229, 221, 0.6);
   }
