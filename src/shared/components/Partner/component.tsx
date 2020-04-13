@@ -9,7 +9,7 @@ type PartnerProps = {
 
 const Partner: React.FC<PartnerProps> = (props: PartnerProps) => {
   return (
-    <PartnerWrapper>
+    <PartnerWrapper className="d-flex align-items-center justify-content-center">
       <ImageElement src={props.imageSrc} alt={props.imageAlt}></ImageElement>
     </PartnerWrapper>
   );
