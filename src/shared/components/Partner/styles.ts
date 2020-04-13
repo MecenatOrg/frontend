@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const PartnerWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 140px;
   background: #ffffff;
