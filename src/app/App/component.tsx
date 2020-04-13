@@ -1,15 +1,21 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import HomePage from '../pages/HomePage';
 
 import { AppWrapper } from './styles';
 
-type AppProps = {};
-
-const App: React.FC<AppProps> = () => {
+const App: React.FC = () => {
   return (
-    <Container>
+    <Router>
       <AppWrapper>Hello World!</AppWrapper>
-    </Container>
+
+      <Switch>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 

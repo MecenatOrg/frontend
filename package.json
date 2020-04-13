@@ -15,7 +15,6 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
-    "redux-saga": "^1.1.3",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
     "source-map-explorer": "^2.2.2",
@@ -29,18 +28,40 @@
     "test": "react-scripts test",
     "lint": "tsc --noEmit && eslint '*/**/*.{ts,tsx}' --quiet --fix",
     "eject": "react-scripts eject",
-    "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "precommit": "lint-staged"
+    "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "husky": {
+    "hooks": {
+      "pre-commit": "\"lint-staged\" \"npm run test\""
+    }
   },
   "lint-staged": {
-    "*.{ts, tsx}": [
-      "node_modules/.bin/eslint --max-warnings=0",
+    "**/*.ts{,x}": [
+      "eslint --fix",
+      "stylelint --config .stylelintrc.json",
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.json": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.js": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.scss": [
+      "prettier --write",
+      "stylelint",
+      "git add"
+    ],
+    "**/*.md": [
       "prettier --write",
       "git add"
     ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -55,7 +76,7 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^8.1.1",
     "@types/classnames": "^2.2.9",
@@ -78,10 +99,14 @@
     "eslint-plugin-react": "^7.18.3",
     "husky": "^4.2.5",
     "jest": "^24.9.0",
-    "jest-dom": "^4.0.0",
     "lint-staged": "^10.1.3",
     "prettier": "^1.19.1",
     "redux-devtools-extension": "^2.13.8",
+    "stylelint": "^13.3.1",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
     "ts-jest": "^25.3.1"
   }
 }

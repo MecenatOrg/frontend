@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
 export const AppWrapper = styled.div`
-  font-eight: 20px;
+  font-weight: 16px;
 `;

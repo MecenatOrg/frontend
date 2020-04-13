@@ -1,3 +1,3 @@
-export interface ApplicationState {
-  simpleReducer: any;
+export interface AppState {
+  simpleReducer: string;
 }
