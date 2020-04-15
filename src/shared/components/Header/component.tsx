@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { HeaderWrapper } from './styles';
 import { Container, Row, Col } from 'react-bootstrap';
-import { MenuListItem } from './interfaces';
+
+import { LogoBlack } from '../../icons';
+
+import { MenuListItem } from './types';
 import Navigation from './Navigation';
 import SearchBar from './SearchBar';
-import { LogoBlack } from '../../icons';
+
+import { HeaderWrapper } from './styles';
 
 const Header: React.FC = () => {
   const menuList: MenuListItem[] = [

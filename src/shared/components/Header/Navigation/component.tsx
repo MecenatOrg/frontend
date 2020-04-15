@@ -1,7 +1,8 @@
 import React from 'react';
-import { Navigation, ToggleMenu, SearchButton } from './styles';
-import { MenuListItem } from '../interfaces';
+
 import { SearchIcon } from '../../../icons';
+import { MenuListItem } from '../types';
+import { Navigation, ToggleMenu, SearchButton } from './styles';
 
 type NavigationProps = {
   menuList: MenuListItem[];

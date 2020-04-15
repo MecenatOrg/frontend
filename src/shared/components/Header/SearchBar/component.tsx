@@ -1,8 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { SearchBarWrapper, LabelIcon, FormWrapper, Form, ButtonClose } from './styles';
-import { SearchIcon, CloseIcon } from '../../../icons';
 import classNames from 'classnames';
+
+import { SearchIcon, CloseIcon } from '../../../icons';
+
+import { SearchBarWrapper, LabelIcon, FormWrapper, Form, ButtonClose } from './styles';
 
 type SearchBarProps = {
   isOpenSearch: boolean;
