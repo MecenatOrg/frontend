@@ -2,8 +2,8 @@ import React from 'react';
 import { PartnerWrapper, ImageElement } from './styles';
 
 type PartnerProps = {
-  imageSrc?: string;
-  imageAlt?: string;
+  imageSrc: string;
+  imageAlt: string;
 };
 
 const Partner: React.FC<PartnerProps> = (props: PartnerProps) => {
