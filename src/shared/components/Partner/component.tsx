@@ -6,10 +6,10 @@ type PartnerProps = {
   imageAlt: string;
 };
 
-const Partner: React.FC<PartnerProps> = (props: PartnerProps) => {
+const Partner: React.FC<PartnerProps> = ({ imageSrc, imageAlt }: PartnerProps) => {
   return (
     <PartnerWrapper>
-      <ImageElement src={props.imageSrc} alt={props.imageAlt} />
+      <ImageElement src={imageSrc} alt={imageAlt} />
     </PartnerWrapper>
   );
 };
