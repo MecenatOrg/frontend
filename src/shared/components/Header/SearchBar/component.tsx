@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import classNames from 'classnames';
 
 import { SearchIcon, CloseIcon } from '../../../icons';
 
@@ -13,7 +12,6 @@ type SearchBarProps = {
 
 const SearchBar: React.FC<SearchBarProps> = ({ isOpenSearch, onToggle }: SearchBarProps) => {
   const inputSearch = useRef<HTMLInputElement>(null);
-  const searchBarClasses = classNames({ active: isOpenSearch });
   useEffect(() => {
     if (inputSearch && inputSearch.current && isOpenSearch) {
       inputSearch.current.focus();
@@ -21,7 +19,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ isOpenSearch, onToggle }: SearchB
   }, [isOpenSearch]);
 
   return (
-    <SearchBarWrapper className={searchBarClasses}>
+    <SearchBarWrapper isOpenSearch={isOpenSearch}>
       <Container>
         <Row>
           <Col>

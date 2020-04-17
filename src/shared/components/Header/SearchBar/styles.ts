@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const SearchBarWrapper = styled.div`
+type StyleProps = {
+  isOpenSearch: boolean;
+};
+
+export const SearchBarWrapper = styled.div<StyleProps>`
   position: absolute;
   top: 0;
   left: 0;
@@ -11,10 +15,8 @@ export const SearchBarWrapper = styled.div`
   background-color: #fff;
   z-index: 10;
   transform: translateY(-100%);
+  ${({ isOpenSearch }: StyleProps): string => `transform: translateY(${isOpenSearch ? '0' : '-100%'})`};
   transition: transform 0.3s;
-  &.active {
-    transform: translateY(0);
-  }
 `;
 
 export const LabelIcon = styled.label`
