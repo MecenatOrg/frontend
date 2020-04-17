@@ -7,6 +7,9 @@ export const Navigation = styled.nav`
   ul {
     display: flex;
     align-items: center;
+    @media (max-width: 767px) {
+      display: none;
+    }
     li {
       display: flex;
       align-items: center;

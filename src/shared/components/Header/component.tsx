@@ -7,7 +7,7 @@ import { MenuListItem } from './types';
 import Navigation from './Navigation';
 import SearchBar from './SearchBar';
 
-import { HeaderWrapper } from './styles';
+import { HeaderWrapper, LogoWrapper } from './styles';
 
 const Header: React.FC = () => {
   const menuList: MenuListItem[] = [
@@ -26,10 +26,13 @@ const Header: React.FC = () => {
       <SearchBar isOpenSearch={isOpenSearch} onToggle={onToggleHandler} />
       <Container>
         <Row>
-          <Col>
-            <LogoBlack />
+          <Col xs={5} sm={3}>
+            <LogoWrapper href="#">
+              <LogoBlack mobile={true} />
+              <LogoBlack mobile={false} />
+            </LogoWrapper>
           </Col>
-          <Col>
+          <Col xs={7} sm={9}>
             <Navigation onToggle={onToggleHandler} menuList={menuList} />
           </Col>
         </Row>
