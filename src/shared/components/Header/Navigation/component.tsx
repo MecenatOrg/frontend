@@ -28,11 +28,9 @@ const Header: React.FC<NavigationProps> = ({ onToggle, isOpenMenu }: NavigationP
           </SearchButton>
         </li>
         {navList.map(item => {
-          return (
-            <li key={item.name}>
-              <a href={item.link}>{item.name}</a>
-            </li>
-          );
+          <li key={item.name}>
+            <a href={item.link}>{item.name}</a>
+          </li>;
         })}
       </ul>
       <ToggleMenu

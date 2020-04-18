@@ -53,22 +53,18 @@ const Menu: React.FC<MenuProps> = ({ isOpenMenu }: MenuProps) => {
     <MenuWrapper isOpenMenu={isOpenMenu}>
       <Container>
         <MenuListWrapper>
-          {MenuLists.map((MenuList: MenuList, index: number) => {
-            return (
-              <nav key={index}>
-                <strong>{MenuList.heading}</strong>
-                <ul>
-                  {MenuList.list.map((item: MenuItem, i: number) => {
-                    return (
-                      <li key={i}>
-                        <a href={item.link}>{item.name}</a>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </nav>
-            );
-          })}
+          {MenuLists.map((MenuList: MenuList, index: number) => (
+            <nav key={index}>
+              <strong>{MenuList.heading}</strong>
+              <ul>
+                {MenuList.list.map((item: MenuItem, i: number) => (
+                  <li key={i}>
+                    <a href={item.link}>{item.name}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
         </MenuListWrapper>
       </Container>
     </MenuWrapper>
