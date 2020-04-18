@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 
 import { MenuWrapper, MenuListWrapper } from './styles';
 
-type menuProps = {
+type MenuProps = {
   isOpenMenu: boolean;
 };
 
@@ -17,7 +17,7 @@ type MenuList = {
   list: MenuItem[];
 };
 
-const Menu: React.FC<menuProps> = ({ isOpenMenu }: menuProps) => {
+const Menu: React.FC<MenuProps> = ({ isOpenMenu }: MenuProps) => {
   const MenuLists: Array<MenuList> = [
     {
       heading: 'Категорії',
