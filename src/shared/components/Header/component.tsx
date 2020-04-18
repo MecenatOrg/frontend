@@ -6,6 +6,7 @@ import { LogoBlack } from '../../icons';
 import { MenuListItem } from './types';
 import Navigation from './Navigation';
 import SearchBar from './SearchBar';
+import Menu from './Menu';
 
 import { HeaderWrapper, LogoWrapper } from './styles';
 
@@ -24,6 +25,7 @@ const Header: React.FC = () => {
   return (
     <HeaderWrapper>
       <SearchBar isOpenSearch={isOpenSearch} onToggle={onToggleHandler} />
+      <Menu />
       <Container>
         <Row>
           <Col xs={5} sm={3}>
