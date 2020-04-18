@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Colors from '../colors';
+import Colors from 'shared/colors';
 
 const typographyFont = `
   font-family: 'Montserrat', sans-serif;
