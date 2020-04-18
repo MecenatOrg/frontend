@@ -75,6 +75,7 @@ export const ButtonWrapper = styled.button<StyleProps>`
         `;
     }
   }};
+  transition: background 0.3s;
   outline: none;
   @media (max-width: 576px) {
     width: 100%;

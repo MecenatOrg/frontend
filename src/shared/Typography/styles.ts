@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 import Colors from '../colors';
 
-export const H1 = styled.h1`
+const typographyFont = `
   font-family: 'Montserrat', sans-serif;
+`;
+
+export const H1 = styled.h1`
+  ${typographyFont}
   font-weight: 700;
   font-size: 50px;
   line-height: 54px;
@@ -14,7 +18,7 @@ export const H1 = styled.h1`
 `;
 
 export const H2 = styled.h2`
-  font-family: 'Montserrat', sans-serif;
+  ${typographyFont}
   font-weight: 700;
   font-size: 40px;
   line-height: 46px;
@@ -26,7 +30,7 @@ export const H2 = styled.h2`
 `;
 
 export const H3 = styled.h3`
-  font-family: 'Montserrat', sans-serif;
+  ${typographyFont}
   font-weight: 700;
   font-size: 26px;
   line-height: 34px;
@@ -34,7 +38,7 @@ export const H3 = styled.h3`
 `;
 
 export const H4 = styled.h4`
-  font-family: 'Montserrat', sans-serif;
+  ${typographyFont}
   font-weight: 700;
   font-size: 22px;
   line-height: 30px;
