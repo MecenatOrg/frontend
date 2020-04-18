@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import { LogoBlack } from '../../icons';
+import { LogoBlack } from 'shared/icons';
 
 import { MenuListItem } from './types';
 import Navigation from './Navigation';

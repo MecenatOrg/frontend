@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import { SearchIcon, CloseIcon } from '../../../icons';
+import { SearchIcon, CloseIcon } from 'shared/icons';
 
 import { SearchBarWrapper, LabelIcon, FormWrapper, Form, ButtonClose } from './styles';
 
