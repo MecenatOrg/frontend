@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import { LogoBlack } from 'shared/icons';
 
-import { MenuListItem } from './types';
 import Navigation from './Navigation';
 import SearchBar from './SearchBar';
 import Menu from './Menu';
@@ -11,21 +10,23 @@ import Menu from './Menu';
 import { HeaderWrapper, LogoWrapper } from './styles';
 
 const Header: React.FC = () => {
-  const menuList: MenuListItem[] = [
-    { name: 'Знайти проекти', link: '#' },
-    { name: 'Додати проект', link: '/link2' },
-  ];
   const [isOpenSearch, setIsOpenSearch] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
   const onToggleHandler = (type: string): void => {
-    if (type === 'search') {
-      setIsOpenSearch(!isOpenSearch);
+    switch (type) {
+      case 'search':
+        setIsOpenSearch(!isOpenSearch);
+        break;
+      case 'menu':
+        setIsOpenMenu(!isOpenMenu);
+        break;
     }
   };
 
   return (
-    <HeaderWrapper>
+    <HeaderWrapper isOpenMenu={isOpenMenu}>
       <SearchBar isOpenSearch={isOpenSearch} onToggle={onToggleHandler} />
-      <Menu />
+      <Menu isOpenMenu={isOpenMenu} />
       <Container>
         <Row>
           <Col xs={5} sm={3}>
@@ -35,7 +36,7 @@ const Header: React.FC = () => {
             </LogoWrapper>
           </Col>
           <Col xs={7} sm={9}>
-            <Navigation onToggle={onToggleHandler} menuList={menuList} />
+            <Navigation onToggle={onToggleHandler} isOpenMenu={isOpenMenu} />
           </Col>
         </Row>
       </Container>

@@ -1,15 +1,19 @@
 import React from 'react';
 
 import { SearchIcon } from 'shared/icons';
-import { MenuListItem } from '../types';
+import { NavListItem } from '../types';
 import { Navigation, ToggleMenu, SearchButton } from './styles';
 
 type NavigationProps = {
-  menuList: MenuListItem[];
+  isOpenMenu: boolean;
   onToggle(type: string): void;
 };
 
-const Header: React.FC<NavigationProps> = ({ menuList, onToggle }: NavigationProps) => {
+const Header: React.FC<NavigationProps> = ({ onToggle, isOpenMenu }: NavigationProps) => {
+  const navList: NavListItem[] = [
+    { name: 'Знайти проекти', link: '#' },
+    { name: 'Додати проект', link: '/link2' },
+  ];
   return (
     <Navigation>
       <ul>
@@ -23,7 +27,7 @@ const Header: React.FC<NavigationProps> = ({ menuList, onToggle }: NavigationPro
             Пошук
           </SearchButton>
         </li>
-        {menuList.map(item => {
+        {navList.map(item => {
           return (
             <li key={item.name}>
               <a href={item.link}>{item.name}</a>
@@ -31,7 +35,12 @@ const Header: React.FC<NavigationProps> = ({ menuList, onToggle }: NavigationPro
           );
         })}
       </ul>
-      <ToggleMenu />
+      <ToggleMenu
+        isOpenMenu={isOpenMenu}
+        onClick={(): void => {
+          onToggle('menu');
+        }}
+      />
     </Navigation>
   );
 };

@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+type StyleProps = {
+  isOpenMenu: boolean;
+};
+
 export const Navigation = styled.nav`
   display: flex;
   align-items: center;
@@ -36,7 +40,7 @@ export const SearchButton = styled.button`
   font-weight: 500;
 `;
 
-export const ToggleMenu = styled.button`
+export const ToggleMenu = styled.button<StyleProps>`
   position: relative;
   display: block;
   width: 24px;
@@ -53,11 +57,14 @@ export const ToggleMenu = styled.button`
     width: 100%;
     height: 2px;
     background-color: #000;
+    transition: all 0.25s ease-out;
   }
   &::after {
-    top: 6px;
+    ${({ isOpenMenu }: StyleProps): string =>
+      `top: ${isOpenMenu ? '11px' : '6px'}; transform: rotate(${isOpenMenu ? '-45deg' : '0'})`};
   }
   &::before {
-    bottom: 6px;
+    ${({ isOpenMenu }: StyleProps): string =>
+      `bottom: ${isOpenMenu ? '11px' : '6px'}; transform: rotate(${isOpenMenu ? '45deg' : '0'})`};
   }
 `;
