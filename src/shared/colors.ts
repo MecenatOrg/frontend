@@ -11,10 +11,11 @@ enum Colors {
   PURPLE_LIGHT = '#D2BEE5',
   LIGHT = '#FBF6F2',
   DARK = '#090909',
+  LIGHT_GREY = '#B1B1B1',
   BODY_TEXT = '#575757',
   BLACK = '#000000',
   WHITE = '#FFFFFF',
-  DARK_BUTTON = '#181818',
+  DARK_BACKGROUND = '#181818',
 }
 
 export default Colors;

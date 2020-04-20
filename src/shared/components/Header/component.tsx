@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import { LogoBlack } from '../../icons';
+import { LogoBlackIcon } from 'shared/icons';
 
 import { MenuListItem } from './types';
 import Navigation from './Navigation';
@@ -28,8 +28,8 @@ const Header: React.FC = () => {
         <Row>
           <Col xs={5} sm={3}>
             <LogoWrapper href="#">
-              <LogoBlack mobile={true} />
-              <LogoBlack mobile={false} />
+              <LogoBlackIcon mobile={true} />
+              <LogoBlackIcon mobile={false} />
             </LogoWrapper>
           </Col>
           <Col xs={7} sm={9}>

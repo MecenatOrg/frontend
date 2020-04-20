@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Colors from 'shared/colors';
+import media from 'shared/media-types';
 
 const typographyFont = `
   font-family: 'Montserrat', sans-serif;
@@ -11,7 +12,7 @@ export const H1 = styled.h1`
   font-size: 50px;
   line-height: 54px;
   color: ${Colors.DARK};
-  @media (max-width: 576px) {
+  ${media.mobileMax} {
     font-size: 46px;
     line-height: 50px;
   }
@@ -23,7 +24,7 @@ export const H2 = styled.h2`
   font-size: 40px;
   line-height: 46px;
   color: ${Colors.BLACK};
-  @media (max-width: 576px) {
+  ${media.mobileMax} {
     font-size: 36px;
     line-height: 42px;
   }
