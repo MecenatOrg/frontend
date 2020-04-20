@@ -6,7 +6,7 @@ type ButtonProps = {
   title: string;
 };
 
-const Button: React.FC<ButtonProps> = ({ variant, title }: ButtonProps) => {
-  return <ButtonWrapper variant={variant}>{title}</ButtonWrapper>;
-};
+const Button: React.FC<ButtonProps> = ({ variant, title }: ButtonProps) => (
+  <ButtonWrapper variant={variant}>{title}</ButtonWrapper>
+);
 export default Button;
