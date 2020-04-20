@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Colors from 'shared/colors';
 import MediaTypes from 'shared/media-types';
 
-export const FooterWrapper = styled.div`
+export const FooterWrapper = styled.footer`
   padding: 60px 0;
   background: ${Colors.DARK_BACKGROUND};
   font-size: 15px;
