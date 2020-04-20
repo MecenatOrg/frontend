@@ -65,3 +65,19 @@ export const SocialIconWrapper = styled.div`
     text-align: left;
   }
 `;
+
+export const SocialIconLink = styled.a`
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  line-height: 35px;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+  &:hover {
+    background: ${Colors.ORANGE_DARK};
+  }
+`;

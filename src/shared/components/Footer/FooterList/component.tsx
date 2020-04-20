@@ -1,5 +1,5 @@
 import React from 'react';
-import { FooterListWrapper, FooterListHeading, SocialIconWrapper, FooterListItem } from './styles';
+import { FooterListWrapper, FooterListHeading, SocialIconWrapper, FooterListItem, SocialIconLink } from './styles';
 import { TwitterIcon, LinkedinIcon, FacebookIcon } from 'shared/icons';
 
 type FooterItem = {
@@ -80,9 +80,15 @@ const FooterList: React.FC = () => {
         <FooterListHeading>Підписатись на розсилку</FooterListHeading>
         {/*Email Input*/}
         <SocialIconWrapper>
-          <TwitterIcon />
-          <FacebookIcon />
-          <LinkedinIcon />
+          <SocialIconLink href="/">
+            <TwitterIcon />
+          </SocialIconLink>
+          <SocialIconLink href="/">
+            <FacebookIcon />
+          </SocialIconLink>
+          <SocialIconLink href="/">
+            <LinkedinIcon />
+          </SocialIconLink>
         </SocialIconWrapper>
       </div>
     </FooterListWrapper>

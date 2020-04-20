@@ -2,7 +2,6 @@ import React from 'react';
 
 const LinkedinIcon: React.FC = () => (
   <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="24" height="24" rx="12" fill="#181818" />
     <path
       d="M9.87078 9.73376H8.33438C8.26619 9.73376 8.21094 9.79558 8.21094 9.8718V15.3914C8.21094 15.4676 8.26619 15.5294 8.33438 15.5294H9.87078C9.93897 15.5294 9.99422 15.4676 9.99422 15.3914V9.8718C9.99422 9.79558 9.93897 9.73376 9.87078 9.73376Z"
       fill="white"

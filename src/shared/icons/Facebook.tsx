@@ -2,7 +2,6 @@ import React from 'react';
 
 const FacebookIcon: React.FC = () => (
   <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="24" height="24" rx="12" fill="#181818" />
     <path
       fillRule="evenodd"
       clipRule="evenodd"
