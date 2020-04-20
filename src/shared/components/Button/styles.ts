@@ -65,7 +65,7 @@ export const ButtonWrapper = styled.button<StyleProps>`
           font-size: 14px;
           line-height: 17px;
           border: none;
-          background-color: ${Colors.DARK_BUTTON};
+          background-color: ${Colors.DARK_BACKGROUND};
           color: ${Colors.WHITE};
           padding: 0 30px;
           &:hover {

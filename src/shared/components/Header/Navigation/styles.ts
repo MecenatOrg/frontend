@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Colors from 'shared/colors';
 
 export const Navigation = styled.nav`
   display: flex;
@@ -18,7 +19,7 @@ export const Navigation = styled.nav`
     }
     a {
       font-size: 14px;
-      color: #000;
+      color: ${Colors.BLACK};
       text-decoration: none;
     }
     svg {
@@ -32,7 +33,7 @@ export const SearchButton = styled.button`
   padding: 0;
   border: 0;
   background-color: transparent;
-  color: #000;
+  color: ${Colors.BLACK};
   font-weight: 500;
 `;
 
@@ -52,7 +53,7 @@ export const ToggleMenu = styled.button`
     right: 0;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background-color: ${Colors.BLACK};
   }
   &::after {
     top: 6px;

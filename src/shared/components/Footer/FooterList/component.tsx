@@ -1,6 +1,6 @@
 import React from 'react';
 import { FooterListWrapper, FooterListHeading, SocialIconWrapper, FooterListItem } from './styles';
-import { TwitterIcon, LinkedinIcon, FacebookIcon } from '../../../icons';
+import { TwitterIcon, LinkedinIcon, FacebookIcon } from 'shared/icons';
 
 type FooterItem = {
   name: string;
@@ -46,22 +46,18 @@ const FooterList: React.FC = () => {
 
   return (
     <FooterListWrapper>
-      {footerLists.map((footerList: FooterList, index: number) => {
-        return (
-          <div key={index}>
-            <FooterListHeading>{footerList.heading}</FooterListHeading>
-            <ul>
-              {footerList.list.map((item: FooterItem, i) => {
-                return (
-                  <FooterListItem key={i}>
-                    <a href={item.link}>{item.name}</a>
-                  </FooterListItem>
-                );
-              })}
-            </ul>
-          </div>
-        );
-      })}
+      {footerLists.map((footerList: FooterList, index: number) => (
+        <div key={index}>
+          <FooterListHeading>{footerList.heading}</FooterListHeading>
+          <ul>
+            {footerList.list.map((item: FooterItem, i) => (
+              <FooterListItem key={i}>
+                <a href={item.link}>{item.name}</a>
+              </FooterListItem>
+            ))}
+          </ul>
+        </div>
+      ))}
       <div>
         <FooterListHeading>Підписатись на розсилку</FooterListHeading>
         {/*Email Input*/}

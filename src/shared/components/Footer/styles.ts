@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import Colors from 'shared/colors';
 
 export const FooterWrapper = styled.div`
   padding: 60px 0;
-  background: #181818;
+  background: ${Colors.DARK_BACKGROUND};
   font-size: 15px;
   line-height: 28px;
-  color: #ffffff;
+  color: ${Colors.WHITE};
 `;
 
 export const LogoWrapper = styled.div`
@@ -19,6 +20,6 @@ export const CopyrightWrapper = styled.div`
 `;
 
 export const Copyright = styled.div`
-  color: #fff;
+  color: ${Colors.WHITE};
   opacity: 0.63;
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Colors from 'shared/colors';
 
 export const FooterListWrapper = styled.div`
   display: flex;
@@ -16,7 +17,7 @@ export const FooterListItem = styled.li`
     opacity: 0.63;
     line-height: 28px;
     font-size: 15px;
-    color: #fff;
+    color: ${Colors.WHITE};
     &:hover {
       opacity: 1;
       text-decoration: none;
