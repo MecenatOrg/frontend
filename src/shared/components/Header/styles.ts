@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'shared/media-types';
 
 type StyleProps = {
   isOpenMenu: boolean;
@@ -17,13 +18,13 @@ export const HeaderWrapper = styled.header<StyleProps>`
 export const LogoWrapper = styled.a`
   .logo-mobile {
     display: none;
-    @media (max-width: 767px) {
+    ${media.tabletMMax} {
       display: block;
     }
   }
   .logo-desktop {
     display: block;
-    @media (max-width: 767px) {
+    ${media.tabletMMax} {
       display: none;
     }
   }

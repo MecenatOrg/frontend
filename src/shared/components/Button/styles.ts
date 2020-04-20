@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Colors from 'shared/colors';
+import media from 'shared/media-types';
 
 export enum ButtonVariant {
   PRIMARY,
@@ -65,7 +66,7 @@ export const ButtonWrapper = styled.button<StyleProps>`
           font-size: 14px;
           line-height: 17px;
           border: none;
-          background-color: ${Colors.DARK_BUTTON};
+          background-color: ${Colors.DARK_BACKGROUND};
           color: ${Colors.WHITE};
           padding: 0 30px;
           &:hover {
@@ -77,7 +78,7 @@ export const ButtonWrapper = styled.button<StyleProps>`
   }};
   transition: background 0.3s;
   outline: none;
-  @media (max-width: 576px) {
+  ${media.mobileMax} {
     width: 100%;
   }
 `;

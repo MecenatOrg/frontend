@@ -5,6 +5,8 @@ type StyleProps = {
   isOpenMenu: boolean;
 };
 
+import media from 'shared/media-types';
+
 export const Navigation = styled.nav`
   display: flex;
   align-items: center;
@@ -12,7 +14,7 @@ export const Navigation = styled.nav`
   ul {
     display: flex;
     align-items: center;
-    @media (max-width: 767px) {
+    ${media.tabletMMax} {
       display: none;
     }
     li {
