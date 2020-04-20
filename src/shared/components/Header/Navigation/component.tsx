@@ -1,7 +1,10 @@
 import React from 'react';
 
+import Button from 'shared/components/Button';
+import { ButtonVariant } from 'shared/components/Button/styles';
+
 import { SearchIcon } from 'shared/icons';
-import { Navigation, ToggleMenu, SearchButton } from './styles';
+import { Navigation, ToggleMenu, SearchButton, ButtonWrapper } from './styles';
 
 export type NavListItem = {
   name: string;
@@ -37,6 +40,9 @@ const Header: React.FC<NavigationProps> = ({ onToggle, isOpenMenu }: NavigationP
           </li>
         ))}
       </ul>
+      <ButtonWrapper>
+        <Button title="Допомогти" variant={ButtonVariant.PRIMARY_SMALL} />
+      </ButtonWrapper>
       <ToggleMenu
         isOpenMenu={isOpenMenu}
         onClick={(): void => {

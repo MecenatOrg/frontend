@@ -15,6 +15,7 @@ enum Colors {
   BLACK = '#000000',
   WHITE = '#FFFFFF',
   DARK_BUTTON = '#181818',
+  PLACEHOLDER = '#b1b1b1',
 }
 
 export default Colors;

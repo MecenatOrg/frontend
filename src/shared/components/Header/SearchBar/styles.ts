@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Colors from 'shared/colors';
 
 type StyleProps = {
   isOpenSearch: boolean;
@@ -12,7 +13,7 @@ export const SearchBarWrapper = styled.div<StyleProps>`
   bottom: 0;
   display: flex;
   align-items: center;
-  background-color: #fff;
+  background-color: ${Colors.WHITE};
   z-index: 10;
   transform: translateY(-100%);
   ${({ isOpenSearch }: StyleProps): string => `transform: translateY(${isOpenSearch ? '0' : '-100%'})`};
@@ -42,7 +43,7 @@ export const Form = styled.form`
     &::placeholder {
       font-size: 14px;
       font-weight: 500;
-      color: #b1b1b1;
+      color: ${Colors.PLACEHOLDER};
       line-height: 1;
     }
   }
