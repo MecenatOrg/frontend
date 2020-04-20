@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Colors from 'shared/colors';
-import MediaTypes from 'shared/media-types';
+import media from 'shared/media-types';
 
 export enum ButtonVariant {
   PRIMARY,
@@ -78,7 +78,7 @@ export const ButtonWrapper = styled.button<StyleProps>`
   }};
   transition: background 0.3s;
   outline: none;
-  @media (max-width: ${MediaTypes.MOBILE}) {
+  ${media.mobileMax} {
     width: 100%;
   }
 `;

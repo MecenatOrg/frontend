@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import MediaTypes from 'shared/media-types';
+import media from 'shared/media-types';
 
 export const PartnerWrapper = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ export const PartnerWrapper = styled.div`
   padding: 35px 60px;
   background: #ffffff;
   margin-top: 14px;
-  @media (max-width: ${MediaTypes.MOBILE}) {
+  ${media.mobileMax} {
     padding: 22px 37px;
   }
   &:hover {

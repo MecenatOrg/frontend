@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Colors from 'shared/colors';
-import MediaTypes from 'shared/media-types';
+import media from 'shared/media-types';
 
 export const FooterWrapper = styled.footer`
   padding: 60px 0;
@@ -18,7 +18,7 @@ export const CopyrightWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  @media (max-width: ${MediaTypes.TABLET}) {
+  ${media.tabletMMax} {
     font-size: 12px;
   }
 `;

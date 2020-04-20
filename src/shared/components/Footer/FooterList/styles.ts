@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Colors from 'shared/colors';
-import MediaTypes from 'shared/media-types';
+import media from 'shared/media-types';
 
 type StyleProps = {
   order: number | null;
@@ -10,7 +10,7 @@ export const FooterListWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 80px;
-  @media (max-width: ${MediaTypes.TABLET}) {
+  ${media.tabletMMax} {
     flex-flow: row wrap;
     margin-bottom: 0;
     > div {
@@ -43,7 +43,7 @@ export const FooterListHeading = styled.div`
 
 export const FooterListItem = styled.li<StyleProps>`
   padding-bottom: 10px;
-  @media (max-width: ${MediaTypes.TABLET}) {
+  ${media.tabletMMax} {
     ${({ order }: StyleProps): string => `order: ${order || 1}`};
   }
   > a {
@@ -61,7 +61,7 @@ export const FooterListItem = styled.li<StyleProps>`
 
 export const SocialIconWrapper = styled.div`
   text-align: right;
-  @media (max-width: ${MediaTypes.TABLET}) {
+  ${media.tabletMMax} {
     text-align: left;
   }
 `;
