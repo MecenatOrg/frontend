@@ -1,8 +1,12 @@
 import React from 'react';
 
 import { SearchIcon } from 'shared/icons';
-import { NavListItem } from '../types';
 import { Navigation, ToggleMenu, SearchButton } from './styles';
+
+export type NavListItem = {
+  name: string;
+  link: string;
+};
 
 type NavigationProps = {
   isOpenMenu: boolean;
