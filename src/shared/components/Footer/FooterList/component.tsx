@@ -34,7 +34,7 @@ const FooterList: React.FC = () => {
     {
       heading: 'Категорії',
       list: [
-        { name: 'Освіта', link: '' },
+        { name: 'Освіта', link: '/' },
         { name: 'Діти', link: '/' },
         { name: 'Екологія', link: '/' },
         { name: 'Війна', link: '/' },
@@ -45,7 +45,7 @@ const FooterList: React.FC = () => {
     {
       heading: 'Про нас',
       list: [
-        { name: 'Як це працює', link: '' },
+        { name: 'Як це працює', link: '/' },
         { name: 'Поради', link: '/' },
         { name: 'Кейси', link: '/' },
         { name: 'Контакти', link: '/' },
@@ -54,7 +54,7 @@ const FooterList: React.FC = () => {
     {
       heading: 'Проект',
       list: [
-        { name: 'Знайти проект', link: '' },
+        { name: 'Знайти проект', link: '/' },
         { name: 'Додати проект', link: '/' },
         { name: 'Критерії відбору проекту', link: '/' },
       ],
@@ -67,8 +67,8 @@ const FooterList: React.FC = () => {
         <div key={index}>
           <FooterListHeading>{footerList.heading}</FooterListHeading>
           <ul>
-            {footerList.list.map((item: FooterItem, i) => (
-              /* calculate flex order indexed only for the first list*/
+            {footerList.list.map((item: FooterItem, i: number) => (
+              /* calculate flex order index only for the first list of footer list items*/
               <FooterListItem key={i} order={index === 0 ? calculateFlexOrder(i, footerList.list.length) : null}>
                 <a href={item.link}>{item.name}</a>
               </FooterListItem>

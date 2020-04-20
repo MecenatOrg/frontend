@@ -44,7 +44,7 @@ export const FooterListHeading = styled.div`
 export const FooterListItem = styled.li<StyleProps>`
   padding-bottom: 10px;
   @media (max-width: ${MediaTypes.TABLET}) {
-    ${({ order }: StyleProps): string => `order: ${order || 0}`};
+    ${({ order }: StyleProps): string => `order: ${order || 1}`};
   }
   > a {
     opacity: 0.63;
