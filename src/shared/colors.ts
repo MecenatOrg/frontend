@@ -1,0 +1,20 @@
+enum Colors {
+  GREEN_DARK = '#598B82',
+  GREEN_LIGHT = '#C1D1CE',
+  ORANGE_DARK = '#F5704D',
+  ORANGE_LIGHT = '#FFE0C6',
+  BLUE_DARK = '#515EA0',
+  BLUE_LIGHT = '#CBD7F3',
+  YELLOW_DARK = '#FFD167',
+  YELLOW_LIGHT = '#FFECB8',
+  PURPLE_DARK = '#BC96EB',
+  PURPLE_LIGHT = '#D2BEE5',
+  LIGHT = '#FBF6F2',
+  DARK = '#090909',
+  BODY_TEXT = '#575757',
+  BLACK = '#000000',
+  WHITE = '#FFFFFF',
+  DARK_BUTTON = '#181818',
+}
+
+export default Colors;
