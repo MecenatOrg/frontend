@@ -4,7 +4,7 @@ type LogoProps = {
   mobile: boolean;
 };
 
-const LogoBlack: React.FC<LogoProps> = ({ mobile }: LogoProps) => {
+const LogoBlackIcon: React.FC<LogoProps> = ({ mobile }: LogoProps) => {
   if (mobile) {
     return (
       <svg
@@ -72,4 +72,4 @@ const LogoBlack: React.FC<LogoProps> = ({ mobile }: LogoProps) => {
   }
 };
 
-export default LogoBlack;
+export default LogoBlackIcon;

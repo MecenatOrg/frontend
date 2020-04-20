@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SearchIcon } from '../../../icons';
+import { SearchIcon } from 'shared/icons';
 import { MenuListItem } from '../types';
 import { Navigation, ToggleMenu, SearchButton } from './styles';
 
