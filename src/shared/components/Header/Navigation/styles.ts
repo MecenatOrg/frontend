@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Colors from 'shared/colors';
+import MediaTypes from 'shared/media-types';
 
 export const Navigation = styled.nav`
   display: flex;
@@ -8,7 +9,7 @@ export const Navigation = styled.nav`
   ul {
     display: flex;
     align-items: center;
-    @media (max-width: 767px) {
+    @media (max-width: ${MediaTypes.TABLET}) {
       display: none;
     }
     li {
