@@ -25,7 +25,7 @@ export const Navigation = styled.nav`
       text-decoration: none;
     }
   }
-  ${media.tabletMMax} {
+  ${media.tabletLMax} {
     ul {
       display: none;
     }
