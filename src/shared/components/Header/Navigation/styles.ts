@@ -25,15 +25,15 @@ export const Navigation = styled.nav`
       text-decoration: none;
     }
   }
-  ${media.mobileMax} {
-    flex-grow: 1;
-    justify-content: space-between;
-    padding-left: 26px;
-  }
   ${media.tabletMMax} {
     ul {
       display: none;
     }
+  }
+  ${media.mobileMax} {
+    flex-grow: 1;
+    justify-content: space-between;
+    padding-left: 26px;
   }
 `;
 
@@ -48,6 +48,9 @@ export const SearchButton = styled.button`
   svg {
     margin-right: 10px;
   }
+  ${media.tabletMMax} {
+    order: 2;
+  }
   ${media.mobileMax} {
     display: flex;
     align-items: center;
@@ -60,9 +63,6 @@ export const SearchButton = styled.button`
     svg {
       margin-right: 0;
     }
-  }
-  ${media.tabletMMax} {
-    order: 2;
   }
 `;
 
@@ -100,10 +100,10 @@ export const ToggleMenu = styled.button<StyleProps>`
 
 export const ButtonWrapper = styled.div`
   margin-right: 40px;
-  ${media.mobileMax} {
-    margin-right: 10px;
-  }
   ${media.tabletMMax} {
     order: 1;
+  }
+  ${media.mobileMax} {
+    margin-right: 10px;
   }
 `;

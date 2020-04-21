@@ -18,9 +18,6 @@ export const MenuWrapper = styled.div<StyleProps>`
   color: ${Colors.WHITE};
   ${({ isOpenMenu }: StyleProps): string => `transform: translateX(${isOpenMenu ? '0' : '-100%'})`};
   transition: transform 0.2s;
-  ${media.mobileMax} {
-    top: 62px;
-  }
   ${media.tabletMMax} {
     padding: 0;
     position: fixed;
@@ -32,6 +29,9 @@ export const MenuWrapper = styled.div<StyleProps>`
       padding-left: 0;
       padding-right: 0;
     }
+  }
+  ${media.mobileMax} {
+    top: 62px;
   }
 `;
 
@@ -70,22 +70,18 @@ export const MenuListWrapper = styled.div`
       padding-right: 0;
       border-bottom: 1px solid ${Colors.BLUE_NAVY_LIGHT};
       strong {
-        ${media.tabletMMax} {
-          padding: 20px;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          cursor: pointer;
-        }
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
       }
       ul {
-        ${media.tabletMMax} {
+        padding: 10px 20px;
+        margin: 0;
+        background: ${Colors.BLUE_NAVY_LIGHT};
+        li {
           padding: 10px 20px;
-          margin: 0;
-          background: ${Colors.BLUE_NAVY_LIGHT};
-          li {
-            padding: 10px 20px;
-          }
         }
       }
     }

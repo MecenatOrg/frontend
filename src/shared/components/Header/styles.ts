@@ -14,11 +14,11 @@ export const HeaderWrapper = styled.header<StyleProps>`
   ${({ isOpenMenu }: StyleProps): string => `background: ${isOpenMenu ? `${Colors.WHITE}` : 'transparent'};`};
   transition: all 0.3s;
   z-index: 2;
-  ${media.mobileMax} {
-    height: 62px;
-  }
   ${media.tabletMMax} {
     background: ${Colors.WHITE};
+  }
+  ${media.mobileMax} {
+    height: 62px;
   }
 `;
 
