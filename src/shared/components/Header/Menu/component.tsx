@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 
-import { MenuItem, MenuList } from 'shared/types';
+import MenuListItem from './MenuListItem';
+import { MenuList } from 'shared/types';
 
 import { MenuWrapper, MenuListWrapper } from './styles';
 
@@ -41,21 +42,21 @@ const Menu: React.FC<MenuProps> = ({ isOpenMenu }: MenuProps) => {
     },
   ];
 
+  useEffect(() => {
+    if (isOpenMenu) {
+      document.body.style.overflow = 'hidden';
+      window.scrollTo(0, 0);
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isOpenMenu]);
+
   return (
     <MenuWrapper isOpenMenu={isOpenMenu}>
       <Container>
         <MenuListWrapper>
           {MenuLists.map((MenuList: MenuList, index: number) => (
-            <nav key={index}>
-              <strong>{MenuList.heading}</strong>
-              <ul>
-                {MenuList.list.map((item: MenuItem, i: number) => (
-                  <li key={i}>
-                    <a href={item.link}>{item.name}</a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            <MenuListItem list={MenuList} key={index} />
           ))}
         </MenuListWrapper>
       </Container>

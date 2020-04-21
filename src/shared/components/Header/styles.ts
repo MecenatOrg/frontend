@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import media from 'shared/media-types';
-import Color from 'shared/colors';
+import Colors from 'shared/colors';
 
 type StyleProps = {
   isOpenMenu: boolean;
@@ -11,9 +11,15 @@ export const HeaderWrapper = styled.header<StyleProps>`
   display: flex;
   align-items: center;
   height: 80px;
-  ${({ isOpenMenu }: StyleProps): string => `background: ${isOpenMenu ? `${Color.WHITE}` : 'transparent'};`};
+  ${({ isOpenMenu }: StyleProps): string => `background: ${isOpenMenu ? `${Colors.WHITE}` : 'transparent'};`};
   transition: all 0.3s;
   z-index: 2;
+  ${media.mobileMax} {
+    height: 62px;
+  }
+  ${media.tabletMMax} {
+    background: ${Colors.WHITE};
+  }
 `;
 
 export const LogoWrapper = styled.a`
@@ -29,4 +35,10 @@ export const LogoWrapper = styled.a`
       display: none;
     }
   }
+`;
+
+export const HeaderElementsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;

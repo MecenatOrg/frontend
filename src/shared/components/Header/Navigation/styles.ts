@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-
 import media from 'shared/media-types';
-
 import Colors from 'shared/colors';
 
 type StyleProps = {
@@ -15,9 +13,6 @@ export const Navigation = styled.nav`
   ul {
     display: flex;
     align-items: center;
-    ${media.tabletMMax} {
-      display: none;
-    }
     li {
       display: flex;
       align-items: center;
@@ -29,8 +24,15 @@ export const Navigation = styled.nav`
       color: ${Colors.BLACK};
       text-decoration: none;
     }
-    svg {
-      margin-right: 10px;
+  }
+  ${media.mobileMax} {
+    flex-grow: 1;
+    justify-content: space-between;
+    padding-left: 26px;
+  }
+  ${media.tabletMMax} {
+    ul {
+      display: none;
     }
   }
 `;
@@ -42,6 +44,26 @@ export const SearchButton = styled.button`
   background-color: transparent;
   color: ${Colors.BLACK};
   font-weight: 500;
+  margin-right: 40px;
+  svg {
+    margin-right: 10px;
+  }
+  ${media.mobileMax} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    font-size: 0;
+    line-height: 0;
+    margin-right: 0;
+    svg {
+      margin-right: 0;
+    }
+  }
+  ${media.tabletMMax} {
+    order: 2;
+  }
 `;
 
 export const ToggleMenu = styled.button<StyleProps>`
@@ -71,8 +93,17 @@ export const ToggleMenu = styled.button<StyleProps>`
     ${({ isOpenMenu }: StyleProps): string =>
       `bottom: ${isOpenMenu ? '11px' : '6px'}; transform: rotate(${isOpenMenu ? '45deg' : '0'})`};
   }
+  ${media.tabletMMax} {
+    order: 3;
+  }
 `;
 
 export const ButtonWrapper = styled.div`
   margin-right: 40px;
+  ${media.mobileMax} {
+    margin-right: 10px;
+  }
+  ${media.tabletMMax} {
+    order: 1;
+  }
 `;

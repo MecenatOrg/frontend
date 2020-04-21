@@ -23,17 +23,15 @@ const Header: React.FC<NavigationProps> = ({ onToggle, isOpenMenu }: NavigationP
   ];
   return (
     <Navigation>
+      <SearchButton
+        onClick={(): void => {
+          onToggle('search');
+        }}
+      >
+        <SearchIcon />
+        Пошук
+      </SearchButton>
       <ul>
-        <li>
-          <SearchButton
-            onClick={(): void => {
-              onToggle('search');
-            }}
-          >
-            <SearchIcon />
-            Пошук
-          </SearchButton>
-        </li>
         {navList.map(item => (
           <li key={item.name}>
             <a href={item.link}>{item.name}</a>

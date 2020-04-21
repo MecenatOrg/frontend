@@ -7,7 +7,7 @@ import Navigation from './Navigation';
 import SearchBar from './SearchBar';
 import Menu from './Menu';
 
-import { HeaderWrapper, LogoWrapper } from './styles';
+import { HeaderWrapper, LogoWrapper, HeaderElementsWrapper } from './styles';
 
 const Header: React.FC = () => {
   const [isOpenSearch, setIsOpenSearch] = useState(false);
@@ -29,14 +29,14 @@ const Header: React.FC = () => {
       <Menu isOpenMenu={isOpenMenu} />
       <Container>
         <Row>
-          <Col xs={5} sm={3}>
-            <LogoWrapper href="#">
-              <LogoBlackIcon mobile={true} />
-              <LogoBlackIcon mobile={false} />
-            </LogoWrapper>
-          </Col>
-          <Col xs={7} sm={9}>
-            <Navigation onToggle={onToggleHandler} isOpenMenu={isOpenMenu} />
+          <Col>
+            <HeaderElementsWrapper>
+              <LogoWrapper href="#">
+                <LogoBlackIcon mobile={true} />
+                <LogoBlackIcon mobile={false} />
+              </LogoWrapper>
+              <Navigation onToggle={onToggleHandler} isOpenMenu={isOpenMenu} />
+            </HeaderElementsWrapper>
           </Col>
         </Row>
       </Container>
