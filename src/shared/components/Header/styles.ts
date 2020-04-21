@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import media from 'shared/media-types';
+import Color from 'shared/colors';
 
 type StyleProps = {
   isOpenMenu: boolean;
@@ -10,7 +11,7 @@ export const HeaderWrapper = styled.header<StyleProps>`
   display: flex;
   align-items: center;
   height: 80px;
-  ${({ isOpenMenu }: StyleProps): string => `background: ${isOpenMenu ? '#fff' : 'transparent'};`};
+  ${({ isOpenMenu }: StyleProps): string => `background: ${isOpenMenu ? `${Color.WHITE}` : 'transparent'};`};
   transition: all 0.3s;
   z-index: 2;
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from 'shared/components/Button';
+import { Button } from 'shared/components';
 import { ButtonVariant } from 'shared/components/Button/styles';
 
 import { SearchIcon } from 'shared/icons';

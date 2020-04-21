@@ -15,7 +15,6 @@ enum Colors {
   BODY_TEXT = '#575757',
   BLACK = '#000000',
   WHITE = '#FFFFFF',
-  PLACEHOLDER = '#b1b1b1',
   DARK_BACKGROUND = '#181818',
 }
 

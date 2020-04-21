@@ -1,20 +1,12 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 
+import { MenuItem, MenuList } from 'shared/types';
+
 import { MenuWrapper, MenuListWrapper } from './styles';
 
 type MenuProps = {
   isOpenMenu: boolean;
-};
-
-type MenuItem = {
-  name: string;
-  link: string;
-};
-
-type MenuList = {
-  heading: string;
-  list: MenuItem[];
 };
 
 const Menu: React.FC<MenuProps> = ({ isOpenMenu }: MenuProps) => {

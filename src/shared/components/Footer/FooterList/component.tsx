@@ -1,16 +1,9 @@
 import React from 'react';
+
+import { MenuItem, MenuList } from 'shared/types';
+
 import { FooterListWrapper, FooterListHeading, SocialIconWrapper, FooterListItem, SocialIconLink } from './styles';
 import { TwitterIcon, LinkedinIcon, FacebookIcon } from 'shared/icons';
-
-type FooterItem = {
-  name: string;
-  link: string;
-};
-
-type FooterList = {
-  heading: string;
-  list: FooterItem[];
-};
 
 /*
  * This method is created to calculate flex order property for list item element for tablet/mobile resolution.
@@ -30,7 +23,7 @@ const calculateFlexOrder = (index: number, arrayLength: number): number => {
 };
 
 const FooterList: React.FC = () => {
-  const footerLists: Array<FooterList> = [
+  const footerLists: Array<MenuList> = [
     {
       heading: 'Категорії',
       list: [
@@ -63,11 +56,11 @@ const FooterList: React.FC = () => {
 
   return (
     <FooterListWrapper>
-      {footerLists.map((footerList: FooterList, index: number) => (
+      {footerLists.map((footerList: MenuList, index: number) => (
         <div key={index}>
           <FooterListHeading>{footerList.heading}</FooterListHeading>
           <ul>
-            {footerList.list.map((item: FooterItem, i: number) => (
+            {footerList.list.map((item: MenuItem, i: number) => (
               /* calculate flex order index only for the first list of footer list items*/
               <FooterListItem key={i} order={index === 0 ? calculateFlexOrder(i, footerList.list.length) : null}>
                 <a href={item.link}>{item.name}</a>

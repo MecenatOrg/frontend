@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+
+import media from 'shared/media-types';
+
 import Colors from 'shared/colors';
 
 type StyleProps = {
   isOpenMenu: boolean;
 };
-
-import media from 'shared/media-types';
 
 export const Navigation = styled.nav`
   display: flex;

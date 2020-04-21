@@ -8,7 +8,7 @@ type StyleProps = {
 export const MenuWrapper = styled.div<StyleProps>`
   display: block;
   position: absolute;
-  padding: 40px 0 70px 0;
+  padding: 40px 0 70px;
   top: 100%;
   left: 0;
   right: 0;
