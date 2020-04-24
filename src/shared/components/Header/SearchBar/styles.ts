@@ -16,7 +16,7 @@ export const SearchBarWrapper = styled.div<StyleProps>`
   background-color: ${Colors.WHITE};
   z-index: 10;
   transform: translateY(-100%);
-  ${({ isOpenSearch }: StyleProps): string => `transform: translateY(${isOpenSearch ? '0' : '-100%'})`};
+  ${({ isOpenSearch }) => `transform: translateY(${isOpenSearch ? '0' : '-100%'})`};
   transition: transform 0.3s;
 `;
 

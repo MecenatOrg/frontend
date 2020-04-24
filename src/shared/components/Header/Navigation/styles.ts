@@ -86,12 +86,10 @@ export const ToggleMenu = styled.button<StyleProps>`
     transition: all 0.25s ease-out;
   }
   &::after {
-    ${({ isOpenMenu }: StyleProps): string =>
-      `top: ${isOpenMenu ? '11px' : '6px'}; transform: rotate(${isOpenMenu ? '-45deg' : '0'})`};
+    ${({ isOpenMenu }) => `top: ${isOpenMenu ? '11px' : '6px'}; transform: rotate(${isOpenMenu ? '-45deg' : '0'})`};
   }
   &::before {
-    ${({ isOpenMenu }: StyleProps): string =>
-      `bottom: ${isOpenMenu ? '11px' : '6px'}; transform: rotate(${isOpenMenu ? '45deg' : '0'})`};
+    ${({ isOpenMenu }) => `bottom: ${isOpenMenu ? '11px' : '6px'}; transform: rotate(${isOpenMenu ? '45deg' : '0'})`};
   }
   ${media.tabletMMax} {
     order: 3;

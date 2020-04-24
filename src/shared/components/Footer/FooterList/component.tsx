@@ -1,9 +1,7 @@
 import React from 'react';
-
 import { MenuItem, MenuList } from 'shared/types';
-
-import { FooterListWrapper, FooterListHeading, SocialIconWrapper, FooterListItem, SocialIconLink } from './styles';
 import { TwitterIcon, LinkedinIcon, FacebookIcon } from 'shared/icons';
+import { FooterListWrapper, FooterListHeading, SocialIconWrapper, FooterListItem, SocialIconLink } from './styles';
 
 /*
  * This method is created to calculate flex order property for list item element for tablet/mobile resolution.

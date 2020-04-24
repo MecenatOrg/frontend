@@ -11,13 +11,13 @@ export const ArrowIconWrapper = styled.div<StyleProps>`
     display: block;
     svg {
       transition: all 0.3s;
-      ${({ isOpenList }: StyleProps): string => `transform: rotate(${isOpenList ? '180deg' : '0'})`};
+      ${({ isOpenList }) => `transform: rotate(${isOpenList ? '180deg' : '0'})`};
     }
   }
 `;
 
 export const ListWrapper = styled.ul<StyleProps>`
   ${media.tabletMMax} {
-    ${({ isOpenList }: StyleProps): string => `display: ${isOpenList ? 'block' : 'none'}`};
+    ${({ isOpenList }) => `display: ${isOpenList ? 'block' : 'none'}`};
   }
 `;

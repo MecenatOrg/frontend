@@ -12,15 +12,11 @@ type MenuListItem = {
 const MenuListItem: React.FC<MenuListItem> = ({ list }: MenuListItem) => {
   const [isOpenList, setIsOpenList] = useState(false);
 
-  const onToggleHandler = (): void => {
-    setIsOpenList(!isOpenList);
-  };
-
   return (
     <nav>
       <strong
         onClick={(): void => {
-          onToggleHandler();
+          setIsOpenList(!isOpenList);
         }}
       >
         {list.heading}

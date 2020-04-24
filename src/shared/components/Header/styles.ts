@@ -11,7 +11,7 @@ export const HeaderWrapper = styled.header<StyleProps>`
   display: flex;
   align-items: center;
   height: 80px;
-  ${({ isOpenMenu }: StyleProps): string => `background: ${isOpenMenu ? `${Colors.WHITE}` : 'transparent'};`};
+  ${({ isOpenMenu }) => `background: ${isOpenMenu ? `${Colors.WHITE}` : 'transparent'};`};
   transition: all 0.3s;
   z-index: 2;
   ${media.tabletMMax} {

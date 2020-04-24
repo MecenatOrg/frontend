@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 
-import MenuListItem from './MenuListItem';
 import { MenuList } from 'shared/types';
+import MenuListItem from './MenuListItem';
 
 import { MenuWrapper, MenuListWrapper } from './styles';
 

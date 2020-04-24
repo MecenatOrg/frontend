@@ -16,7 +16,7 @@ export const MenuWrapper = styled.div<StyleProps>`
   width: 100%;
   background: ${Colors.BLUE_NAVY};
   color: ${Colors.WHITE};
-  ${({ isOpenMenu }: StyleProps): string => `transform: translateX(${isOpenMenu ? '0' : '-100%'})`};
+  ${({ isOpenMenu }) => `transform: translateX(${isOpenMenu ? '0' : '-100%'})`};
   transition: transform 0.2s;
   ${media.tabletMMax} {
     padding: 0;
