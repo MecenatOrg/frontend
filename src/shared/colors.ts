@@ -16,6 +16,7 @@ enum Colors {
   BLACK = '#000000',
   WHITE = '#FFFFFF',
   DARK_BACKGROUND = '#181818',
+  VALIDATION_ERROR = '#F14517',
 }
 
 export default Colors;
