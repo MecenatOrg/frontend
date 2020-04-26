@@ -6,7 +6,7 @@ export enum ButtonVariant {
   PRIMARY,
   PRIMARY_SMALL,
   OUTLINE,
-  DARK,
+  GREY_ULTRA_DARK,
 }
 
 type StyleProps = {
@@ -59,14 +59,14 @@ export const ButtonWrapper = styled.button<StyleProps>`
             color: ${Colors.WHITE};
           }
         `;
-      case ButtonVariant.DARK:
+      case ButtonVariant.GREY_ULTRA_DARK:
         return `
           height: 43px;
           font-weight: bold;
           font-size: 14px;
           line-height: 17px;
           border: none;
-          background-color: ${Colors.DARK_BACKGROUND};
+          background-color: ${Colors.GREY_DARK};
           color: ${Colors.WHITE};
           padding: 0 30px;
           &:hover {
