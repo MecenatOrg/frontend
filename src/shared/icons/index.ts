@@ -8,6 +8,7 @@ import TwitterIcon from './Twitter';
 import FacebookIcon from './Facebook';
 import BigBoxIcon from './BigBox';
 
+// Please keep export items in alphabetical order to reduce number of merge conflicts, also it's easier to read.
 export {
   BigBoxIcon,
   BoxIcon,
