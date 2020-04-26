@@ -23,31 +23,34 @@ const calculateFlexOrder = (index: number, arrayLength: number): number => {
 const FooterList: React.FC = () => {
   const footerLists: Array<MenuList> = [
     {
+      id: Math.random(),
       heading: 'Категорії',
       list: [
-        { name: 'Освіта', link: '/' },
-        { name: 'Діти', link: '/' },
-        { name: 'Екологія', link: '/' },
-        { name: 'Війна', link: '/' },
-        { name: 'Медицина', link: '/' },
-        { name: 'Мистецтво', link: '/' },
+        { name: 'Освіта', link: '/', id: Math.random() },
+        { name: 'Діти', link: '/', id: Math.random() },
+        { name: 'Екологія', link: '/', id: Math.random() },
+        { name: 'Війна', link: '/', id: Math.random() },
+        { name: 'Медицина', link: '/', id: Math.random() },
+        { name: 'Мистецтво', link: '/', id: Math.random() },
       ],
     },
     {
+      id: Math.random(),
       heading: 'Про нас',
       list: [
-        { name: 'Як це працює', link: '/' },
-        { name: 'Поради', link: '/' },
-        { name: 'Кейси', link: '/' },
-        { name: 'Контакти', link: '/' },
+        { name: 'Як це працює', link: '/', id: Math.random() },
+        { name: 'Поради', link: '/', id: Math.random() },
+        { name: 'Кейси', link: '/', id: Math.random() },
+        { name: 'Контакти', link: '/', id: Math.random() },
       ],
     },
     {
+      id: Math.random(),
       heading: 'Проект',
       list: [
-        { name: 'Знайти проект', link: '/' },
-        { name: 'Додати проект', link: '/' },
-        { name: 'Критерії відбору проекту', link: '/' },
+        { name: 'Знайти проект', link: '/', id: Math.random() },
+        { name: 'Додати проект', link: '/', id: Math.random() },
+        { name: 'Критерії відбору проекту', link: '/', id: Math.random() },
       ],
     },
   ];
@@ -55,12 +58,12 @@ const FooterList: React.FC = () => {
   return (
     <FooterListWrapper>
       {footerLists.map((footerList: MenuList, index: number) => (
-        <div key={index}>
+        <div key={footerList.id}>
           <FooterListHeading>{footerList.heading}</FooterListHeading>
           <ul>
             {footerList.list.map((item: MenuItem, i: number) => (
               /* calculate flex order index only for the first list of footer list items*/
-              <FooterListItem key={i} order={index === 0 ? calculateFlexOrder(i, footerList.list.length) : null}>
+              <FooterListItem key={item.id} order={index === 0 ? calculateFlexOrder(i, footerList.list.length) : null}>
                 <a href={item.link}>{item.name}</a>
               </FooterListItem>
             ))}

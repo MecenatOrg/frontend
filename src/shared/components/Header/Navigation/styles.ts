@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import media from 'shared/media-types';
 import Colors from 'shared/colors';
+import media from 'shared/media-types';
 
 type StyleProps = {
   isOpenMenu: boolean;

@@ -25,8 +25,8 @@ const MenuListItem: React.FC<MenuListItem> = ({ list }: MenuListItem) => {
         </ArrowIconWrapper>
       </strong>
       <ListWrapper isOpenList={isOpenList}>
-        {list.list.map((item: MenuItem, i: number) => (
-          <li key={i}>
+        {list.list.map((item: MenuItem) => (
+          <li key={item.id}>
             <a href={item.link}>{item.name}</a>
           </li>
         ))}

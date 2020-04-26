@@ -1,21 +1,21 @@
-import SearchIcon from './Search';
-import CloseIcon from './Close';
-import LogoBlackIcon from './LogoBlack';
-import BoxIcon from './Box';
-import LogoWhiteIcon from './LogoWhite';
-import LinkedinIcon from './Linkedin';
-import TwitterIcon from './Twitter';
-import FacebookIcon from './Facebook';
 import ArrowIcon from './Arrow';
+import BoxIcon from './Box';
+import CloseIcon from './Close';
+import FacebookIcon from './Facebook';
+import LinkedinIcon from './Linkedin';
+import LogoBlackIcon from './LogoBlack';
+import LogoWhiteIcon from './LogoWhite';
+import SearchIcon from './Search';
+import TwitterIcon from './Twitter';
 
 export {
-  SearchIcon,
-  CloseIcon,
-  LogoBlackIcon,
-  BoxIcon,
-  LogoWhiteIcon,
-  LinkedinIcon,
-  TwitterIcon,
-  FacebookIcon,
   ArrowIcon,
+  BoxIcon,
+  CloseIcon,
+  FacebookIcon,
+  LinkedinIcon,
+  LogoBlackIcon,
+  LogoWhiteIcon,
+  SearchIcon,
+  TwitterIcon,
 };
