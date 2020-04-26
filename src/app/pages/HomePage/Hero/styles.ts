@@ -9,7 +9,7 @@ export const HeroWrapper = styled.div`
   > div {
     width: 50%;
   }
-  ${media.mobileMax} {
+  ${media.tabletMax} {
     flex-direction: column;
     padding: 30px 0 40px;
     > div {
@@ -28,7 +28,7 @@ export const HeroTextWrapper = styled.div`
     font-size: 16px;
     line-height: 26px;
   }
-  ${media.tabletMMax} {
+  ${media.tabletMax} {
     h1 {
       font-size: 46px;
     }
@@ -36,16 +36,17 @@ export const HeroTextWrapper = styled.div`
 `;
 
 export const BigBoxIconWrapper = styled.div`
+  text-align: right;
   svg {
-    ${media.tabletLMax} {
-      max-width: 400px;
-    }
-    ${media.tabletLMax} {
-      max-width: 360px;
+    ${media.tabletXLMax} {
+      max-width: 350px;
     }
     ${media.mobileMax} {
       max-height: 350px;
       max-width: 335px;
     }
+  }
+  ${media.tabletMax} {
+    text-align: center;
   }
 `;

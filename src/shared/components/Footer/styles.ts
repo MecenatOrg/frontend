@@ -18,7 +18,7 @@ export const CopyrightWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  ${media.tabletMMax} {
+  ${media.tabletMax} {
     font-size: 12px;
   }
 `;
