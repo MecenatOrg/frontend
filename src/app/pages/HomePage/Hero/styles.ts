@@ -24,14 +24,7 @@ export const HeroTextWrapper = styled.div`
   }
   > p {
     color: ${Colors.GREY};
-    font-weight: 500;
-    font-size: 16px;
     line-height: 26px;
-  }
-  ${media.tabletMax} {
-    h1 {
-      font-size: 46px;
-    }
   }
 `;
 
