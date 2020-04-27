@@ -2,12 +2,13 @@ import React, { useRef, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import { SearchIcon, CloseIcon } from 'shared/icons';
+import { ToggleHandlerType } from 'shared/components/Header/component';
 
 import { SearchBarWrapper, LabelIcon, FormWrapper, Form, ButtonClose } from './styles';
 
 type SearchBarProps = {
   isOpenSearch: boolean;
-  onToggle(type: string): void;
+  onToggle(type: ToggleHandlerType): void;
 };
 
 const SearchBar: React.FC<SearchBarProps> = ({ isOpenSearch, onToggle }: SearchBarProps) => {
@@ -33,7 +34,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ isOpenSearch, onToggle }: SearchB
               <ButtonClose
                 type="button"
                 onClick={(): void => {
-                  onToggle('search');
+                  onToggle(ToggleHandlerType.SEARCH);
                 }}
               >
                 <CloseIcon />

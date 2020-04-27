@@ -9,16 +9,21 @@ import Menu from './Menu';
 
 import { HeaderWrapper, LogoWrapper, HeaderElementsWrapper } from './styles';
 
+export enum ToggleHandlerType {
+  MENU,
+  SEARCH,
+}
+
 const Header: React.FC = () => {
   const [isOpenSearch, setIsOpenSearch] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  const onToggleHandler = (type: string): void => {
+  const onToggleHandler = (type: ToggleHandlerType): void => {
     switch (type) {
-      case 'search':
-        setIsOpenSearch(!isOpenSearch);
-        break;
-      case 'menu':
+      case ToggleHandlerType.MENU:
         setIsOpenMenu(!isOpenMenu);
+        break;
+      case ToggleHandlerType.SEARCH:
+        setIsOpenSearch(!isOpenSearch);
         break;
     }
   };

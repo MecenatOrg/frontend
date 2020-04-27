@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Button } from 'shared/components';
 import { ButtonVariant } from 'shared/components/Button/component';
+import { ToggleHandlerType } from 'shared/components/Header/component';
 
 import { SearchIcon } from 'shared/icons';
 import { Navigation, ToggleMenu, SearchButton, ButtonWrapper } from './styles';
@@ -13,7 +14,7 @@ export type NavListItem = {
 
 type NavigationProps = {
   isOpenMenu: boolean;
-  onToggle(type: string): void;
+  onToggle(type: ToggleHandlerType): void;
 };
 
 const Header: React.FC<NavigationProps> = ({ onToggle, isOpenMenu }: NavigationProps) => {
@@ -25,7 +26,7 @@ const Header: React.FC<NavigationProps> = ({ onToggle, isOpenMenu }: NavigationP
     <Navigation>
       <SearchButton
         onClick={(): void => {
-          onToggle('search');
+          onToggle(ToggleHandlerType.SEARCH);
         }}
       >
         <SearchIcon />
@@ -44,7 +45,7 @@ const Header: React.FC<NavigationProps> = ({ onToggle, isOpenMenu }: NavigationP
       <ToggleMenu
         isOpenMenu={isOpenMenu}
         onClick={(): void => {
-          onToggle('menu');
+          onToggle(ToggleHandlerType.MENU);
         }}
       />
     </Navigation>
