@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ShapeProps } from './types';
+
 const Oval: React.FC<ShapeProps> = ({ size, fill }: ShapeProps) => {
   const getSize = (): number => {
     if (size === 'large') return 246;

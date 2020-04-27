@@ -1,17 +1,15 @@
 import styled from 'styled-components';
 import { Media } from 'react-bootstrap';
 
+import { Size } from 'config/configEnums';
 import Colors from 'shared/colors';
 import media from 'shared/media-types';
 
 type CartWrapperProps = {
-  size: 'small' | 'medium' | 'large';
+  size: Size;
 };
 type CartSubHeaderProps = {
-  textColor?: string;
-};
-type CartShapesProps = CartWrapperProps & {
-  violet?: boolean;
+  textColor?: Colors;
 };
 
 export const CartWrapper = styled.div<CartWrapperProps>`

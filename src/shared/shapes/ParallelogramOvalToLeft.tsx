@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ShapeProps } from './types';
+
 const ParallelogramOvalToLeft: React.FC<ShapeProps> = () => (
   <svg width="158" height="171" viewBox="0 0 158 171" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path

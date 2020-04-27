@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ShapeProps } from './types';
+
 const RectangleOvalToRight: React.FC<ShapeProps> = ({ size }: ShapeProps) => {
   const getWidth = (): number => {
     if (size === 'large') return 242;

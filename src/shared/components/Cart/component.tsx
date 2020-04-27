@@ -5,14 +5,17 @@ import { H3, Text } from 'shared/Typography';
 import { Oval, ParallelogramOvalToLeft, RectangleOvalToRight } from 'shared/shapes';
 import { CartWrapper, ImageWrapper, CartContent, CartSubHeader } from './styles';
 
+import { Size } from 'config/configEnums';
+import Colors from 'shared/colors';
+
 type CartProps = {
   imgName?: string;
   imgURL: string;
   caption: string;
   title: string;
   text?: string;
-  size: 'small' | 'medium' | 'large';
-  textColor?: string;
+  size: Size;
+  textColor?: Colors;
 };
 
 const Cart: React.FC<CartProps> = (props: CartProps) => {
@@ -23,10 +26,10 @@ const Cart: React.FC<CartProps> = (props: CartProps) => {
     <CartWrapper size={size}>
       <ImageWrapper>
         <If condition={_random === 1}>
-          <Oval size={size} fill="#D2BEE5" />
+          <Oval size={size} fill={Colors.PURPLE_LIGHT} />
         </If>
         <If condition={_random === 2}>
-          <Oval size={size} fill="#BDD2CE" />
+          <Oval size={size} fill={Colors.GREEN_LIGHT} />
         </If>
         <If condition={_random === 3}>
           <ParallelogramOvalToLeft size={size} />
