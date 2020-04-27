@@ -11,7 +11,7 @@ const Hero: React.FC = () => (
     <HeroTextWrapper>
       <H1>Соціальні та благодійні ініціативи України</H1>
       <p>Ви можете знайти проект, який підходить вам ідеально, і дізнатися, як ваша компанія може підтримати його.</p>
-      <Button variant={ButtonVariant.DARK} title="Хочу допомогти" />
+      <Button variant={ButtonVariant.PRIMARY} title="Хочу допомогти" />
     </HeroTextWrapper>
     <BigBoxIconWrapper>
       <BigBoxIcon />
