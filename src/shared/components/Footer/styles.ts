@@ -4,7 +4,7 @@ import media from 'shared/media-types';
 
 export const FooterWrapper = styled.footer`
   padding: 60px 0;
-  background: ${Colors.DARK_BACKGROUND};
+  background: ${Colors.GREY_DARK};
   font-size: 15px;
   line-height: 28px;
   color: ${Colors.WHITE};
@@ -18,7 +18,7 @@ export const CopyrightWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  ${media.tabletMMax} {
+  ${media.tabletMax} {
     font-size: 12px;
   }
 `;

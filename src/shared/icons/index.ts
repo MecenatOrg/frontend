@@ -1,4 +1,5 @@
 import ArrowIcon from './Arrow';
+import BigBoxIcon from './BigBox';
 import BoxIcon from './Box';
 import CloseIcon from './Close';
 import FacebookIcon from './Facebook';
@@ -10,6 +11,7 @@ import TwitterIcon from './Twitter';
 
 export {
   ArrowIcon,
+  BigBoxIcon,
   BoxIcon,
   CloseIcon,
   FacebookIcon,

@@ -48,7 +48,7 @@ export const SearchButton = styled.button`
   svg {
     margin-right: 10px;
   }
-  ${media.tabletMMax} {
+  ${media.tabletMax} {
     order: 2;
   }
   ${media.mobileMax} {
@@ -91,14 +91,14 @@ export const ToggleMenu = styled.button<StyleProps>`
   &::before {
     ${({ isOpenMenu }) => `bottom: ${isOpenMenu ? '11px' : '6px'}; transform: rotate(${isOpenMenu ? '45deg' : '0'})`};
   }
-  ${media.tabletMMax} {
+  ${media.tabletMax} {
     order: 3;
   }
 `;
 
 export const ButtonWrapper = styled.div`
   margin-right: 40px;
-  ${media.tabletMMax} {
+  ${media.tabletMax} {
     order: 1;
   }
   ${media.mobileMax} {

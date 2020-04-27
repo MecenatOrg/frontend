@@ -1,23 +1,28 @@
+/*
+ * Please keep colors in alphabetical order and name them according to their color, not place they are used
+ * e.g. ORANGE_ULTRA_LIGHT, not PLACEHOLDER
+ * */
 enum Colors {
-  GREEN_DARK = '#598B82',
-  GREEN_LIGHT = '#C1D1CE',
-  ORANGE_DARK = '#F5704D',
-  ORANGE_LIGHT = '#FFE0C6',
+  BLACK = '#000000',
   BLUE_DARK = '#515EA0',
   BLUE_LIGHT = '#CBD7F3',
   BLUE_NAVY = '#2E63B3',
   BLUE_NAVY_LIGHT = '#3F71BD',
-  YELLOW_DARK = '#FFD167',
-  YELLOW_LIGHT = '#FFECB8',
+  GREEN_DARK = '#598B82',
+  GREEN_LIGHT = '#C1D1CE',
+  GREY = '#575757',
+  GREY_DARK = '#181818',
+  GREY_LIGHT = '#B1B1B1',
+  GREY_ULTRA_DARK = '#090909',
+  GREY_ULTRA_LIGHT = '#FBF6F2',
+  GREY_ULTRA_MEDIUM_LIGHT = '#F2F2F2',
+  ORANGE_DARK = '#F5704D',
+  ORANGE_LIGHT = '#FFE0C6',
   PURPLE_DARK = '#BC96EB',
   PURPLE_LIGHT = '#D2BEE5',
-  LIGHT = '#FBF6F2',
-  DARK = '#090909',
-  LIGHT_GREY = '#B1B1B1',
-  BODY_TEXT = '#575757',
-  BLACK = '#000000',
+  YELLOW_DARK = '#FFD167',
+  YELLOW_LIGHT = '#FFECB8',
   WHITE = '#FFFFFF',
-  DARK_BACKGROUND = '#181818',
 }
 
 export default Colors;

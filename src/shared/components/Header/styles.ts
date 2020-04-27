@@ -14,7 +14,7 @@ export const HeaderWrapper = styled.header<StyleProps>`
   ${({ isOpenMenu }) => `background: ${isOpenMenu ? `${Colors.WHITE}` : 'transparent'};`};
   transition: all 0.3s;
   z-index: 2;
-  ${media.tabletMMax} {
+  ${media.tabletMax} {
     background: ${Colors.WHITE};
   }
   ${media.mobileMax} {
@@ -25,13 +25,13 @@ export const HeaderWrapper = styled.header<StyleProps>`
 export const LogoWrapper = styled.a`
   .logo-mobile {
     display: none;
-    ${media.tabletMMax} {
+    ${media.tabletMax} {
       display: block;
     }
   }
   .logo-desktop {
     display: block;
-    ${media.tabletMMax} {
+    ${media.tabletMax} {
       display: none;
     }
   }

@@ -43,7 +43,7 @@ export const Form = styled.form`
     &::placeholder {
       font-size: 14px;
       font-weight: 500;
-      color: ${Colors.LIGHT_GREY};
+      color: ${Colors.GREY_LIGHT};
       line-height: 1;
     }
   }

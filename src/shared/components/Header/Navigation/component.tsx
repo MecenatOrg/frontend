@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Button } from 'shared/components';
-import { ButtonVariant } from 'shared/components/Button/styles';
+import { ButtonVariant } from 'shared/components/Button/component';
 
 import { SearchIcon } from 'shared/icons';
 import { Navigation, ToggleMenu, SearchButton, ButtonWrapper } from './styles';

@@ -18,7 +18,7 @@ export const MenuWrapper = styled.div<StyleProps>`
   color: ${Colors.WHITE};
   ${({ isOpenMenu }) => `transform: translateX(${isOpenMenu ? '0' : '-100%'})`};
   transition: transform 0.2s;
-  ${media.tabletMMax} {
+  ${media.tabletMax} {
     padding: 0;
     position: fixed;
     top: 80px;
@@ -46,7 +46,7 @@ export const MenuListWrapper = styled.div`
       font-weight: bold;
       font-size: 18px;
       line-height: 36px;
-      ${media.tabletMMax} {
+      ${media.tabletMax} {
         padding: 20px;
         display: flex;
         align-items: center;
@@ -64,7 +64,7 @@ export const MenuListWrapper = styled.div`
       }
     }
   }
-  ${media.tabletMMax} {
+  ${media.tabletMax} {
     nav {
       max-width: 100%;
       padding-right: 0;

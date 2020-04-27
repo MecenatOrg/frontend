@@ -7,7 +7,7 @@ type StyleProps = {
 
 export const ArrowIconWrapper = styled.div<StyleProps>`
   display: none;
-  ${media.tabletMMax} {
+  ${media.tabletMax} {
     display: block;
     svg {
       transition: all 0.3s;
@@ -17,7 +17,7 @@ export const ArrowIconWrapper = styled.div<StyleProps>`
 `;
 
 export const ListWrapper = styled.ul<StyleProps>`
-  ${media.tabletMMax} {
+  ${media.tabletMax} {
     ${({ isOpenList }) => `display: ${isOpenList ? 'block' : 'none'}`};
   }
 `;
