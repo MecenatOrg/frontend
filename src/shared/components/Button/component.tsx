@@ -1,5 +1,12 @@
 import React from 'react';
-import { ButtonWrapper, ButtonVariant } from './styles';
+import { ButtonWrapper } from './styles';
+
+export enum ButtonVariant {
+  PRIMARY,
+  PRIMARY_SMALL,
+  OUTLINE,
+  DARK,
+}
 
 type ButtonProps = {
   variant: ButtonVariant;

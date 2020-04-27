@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 import Colors from 'shared/colors';
 import media from 'shared/media-types';
-
-export enum ButtonVariant {
-  PRIMARY,
-  PRIMARY_SMALL,
-  OUTLINE,
-  GREY_ULTRA_DARK,
-}
+import { ButtonVariant } from './component';
 
 type StyleProps = {
   variant: ButtonVariant;
@@ -59,7 +53,7 @@ export const ButtonWrapper = styled.button<StyleProps>`
             color: ${Colors.WHITE};
           }
         `;
-      case ButtonVariant.GREY_ULTRA_DARK:
+      case ButtonVariant.DARK:
         return `
           height: 43px;
           font-weight: bold;

@@ -26,6 +26,14 @@ export const HeroTextWrapper = styled.div`
     color: ${Colors.GREY};
     line-height: 26px;
   }
+  button {
+    margin-top: 50px;
+  }
+  ${media.tabletMax} {
+    button {
+      display: none;
+    }
+  }
 `;
 
 export const BigBoxIconWrapper = styled.div`
