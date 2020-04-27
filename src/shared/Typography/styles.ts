@@ -11,7 +11,7 @@ export const H1 = styled.h1`
   font-weight: 700;
   font-size: 50px;
   line-height: 54px;
-  color: ${Colors.DARK};
+  color: ${Colors.GREY_ULTRA_DARK};
   ${media.mobileMax} {
     font-size: 46px;
     line-height: 50px;
@@ -51,5 +51,5 @@ export const Text = styled.span`
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
-  color: ${Colors.BODY_TEXT};
+  color: ${Colors.GREY};
 `;

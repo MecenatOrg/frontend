@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Colors from 'shared/colors';
 
 export const AppWrapper = styled.div`
   font-family: 'Montserrat', sans-serif;
@@ -14,4 +15,5 @@ export const AppWrapper = styled.div`
       outline: none;
     }
   }
+  background-color: ${Colors.GREY_ULTRA_MEDIUM_LIGHT};
 `;
