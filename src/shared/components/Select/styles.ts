@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Colors from 'shared/colors';
 
 type SelectProps = {
-  openedSelect: boolean;
+  isOpenedSelect: boolean;
 };
 
 const selectFontStyle = `
@@ -27,9 +27,8 @@ export const SelectWrapper = styled.div<SelectProps>`
   justify-content: space-between;
   cursor: pointer;
   overflow: visible;
-  border: 1px solid ${({ openedSelect }: SelectProps): string => (openedSelect ? Colors.BLACK : 'transparent')};
-
-  ${({ openedSelect }: SelectProps): string => (openedSelect ? dropdownTransformRotate : '')};
+  border: 1px solid ${({ isOpenedSelect }: SelectProps): string => (isOpenedSelect ? Colors.BLACK : 'transparent')};
+  ${({ isOpenedSelect }: SelectProps): string => (isOpenedSelect ? dropdownTransformRotate : '')};
 `;
 export const SelectedWrapper = styled.span`
   ${selectFontStyle};
@@ -38,16 +37,13 @@ export const SelectedWrapper = styled.span`
 
 export const SelectItemsList = styled.div`
   width: 100%;
-
   position: absolute;
   top: 47px;
   left: 0;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-
   background-color: ${Colors.WHITE};
 `;
 
@@ -58,7 +54,6 @@ export const SelectItemsListItem = styled.div`
   ${selectFontStyle};
   color: ${Colors.BLACK};
   cursor: pointer;
-
   &:hover {
     background-color: ${Colors.LIGHT};
   }

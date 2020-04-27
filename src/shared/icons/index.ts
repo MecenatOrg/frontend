@@ -10,14 +10,14 @@ import SendIcon from './Send';
 import DropdownIcon from './Dropdown';
 
 export {
-  SearchIcon,
-  CloseIcon,
-  LogoBlackIcon,
   BoxIcon,
+  CloseIcon,
+  DropdownIcon,
+  FacebookIcon,
+  LogoBlackIcon,
   LogoWhiteIcon,
   LinkedinIcon,
-  TwitterIcon,
-  FacebookIcon,
+  SearchIcon,
   SendIcon,
-  DropdownIcon,
+  TwitterIcon,
 };

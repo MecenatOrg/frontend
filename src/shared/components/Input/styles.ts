@@ -3,7 +3,7 @@ import Colors from 'shared/colors';
 import media from 'shared/media-types';
 
 type InputStyleProps = {
-  withSend?: boolean;
+  includeSendButton?: boolean;
   validationState?: boolean;
   validationMessage?: string;
 };
@@ -25,11 +25,12 @@ export const InputContainer = styled.div`
 `;
 
 export const InputWrapper = styled.input<InputStyleProps>`
-  ${({ withSend }: InputStyleProps): string => `height: ${withSend ? '38px' : '44px'}`};
+  ${({ includeSendButton }: InputStyleProps): string => `height: ${includeSendButton ? '38px' : '44px'}`};
   width: 100%;
-  ${({ withSend }: InputStyleProps): string => `padding: ${withSend ? '12px 20px 11px' : '13px 23px 14px 20px'}`};
+  ${({ includeSendButton }: InputStyleProps): string =>
+    `padding: ${includeSendButton ? '12px 20px 11px' : '13px 23px 14px 20px'}`};
   ${({ validationState }: InputStyleProps): string =>
-    `border: 1px solid ${!validationState ? 'transparent' : Colors.VALIDATION_ERROR}`};
+    `border: 1px solid ${!validationState ? 'transparent' : Colors.ORANGE}`};
   ${({ validationState }: InputStyleProps): string => `margin-bottom: ${!validationState ? '14px' : '2px'}`};
   font-style: normal;
   font-weight: 500;
@@ -44,7 +45,7 @@ export const InputWrapper = styled.input<InputStyleProps>`
     color: ${Colors.BLACK};
   }
   ${media.mobileMax} {
-    ${({ withSend }: InputStyleProps): string => `height: ${withSend ? '38px' : '54px'}`};
+    ${({ includeSendButton }: InputStyleProps): string => `height: ${includeSendButton ? '38px' : '54px'}`};
     width: 100%;
     padding: 17px 20px;
     font-weight: 500;
@@ -54,11 +55,11 @@ export const InputWrapper = styled.input<InputStyleProps>`
   }
 `;
 
-export const InputValidationMessageWrapper = styled.span`
+export const InputValidationMessage = styled.span`
   font-weight: 500;
   font-size: 10px;
   line-height: 12px;
-  color: ${Colors.VALIDATION_ERROR};
+  color: ${Colors.ORANGE};
 `;
 
 export const InputGroupButton = styled.button`

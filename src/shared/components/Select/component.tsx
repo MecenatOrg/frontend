@@ -1,30 +1,20 @@
 import React, { useState } from 'react';
 import { SelectedWrapper, SelectWrapper, SelectItemsList, SelectItemsListItem } from './styles';
-import { DropdownIcon } from '../../icons';
-
-export type SelectProps = {
-  placeholder: string;
-  options: SelectItem[];
-  onSelect: (value: string) => void;
-};
-
-export type SelectItem = {
-  value: string;
-  name: string;
-};
+import { DropdownIcon } from 'shared/icons';
+import { SelectProps, SelectItem } from 'shared/types';
 
 const Select: React.FC<SelectProps> = ({ placeholder, options, onSelect }: SelectProps) => {
-  const [openedSelect, setOpenedSelect] = useState<boolean>(false);
+  const [isOpenedSelect, setIsOpenedSelect] = useState<boolean>(false);
   const [selectedText, setSelectedText] = useState<string>(placeholder);
   function openItemListClickHandler(): void {
-    setOpenedSelect(!openedSelect);
+    setIsOpenedSelect(!isOpenedSelect);
   }
 
   return (
-    <SelectWrapper openedSelect={openedSelect} onClick={openItemListClickHandler}>
+    <SelectWrapper isOpenedSelect={isOpenedSelect} onClick={openItemListClickHandler}>
       <SelectedWrapper>{selectedText}</SelectedWrapper>
       <DropdownIcon />
-      {openedSelect ? (
+      {isOpenedSelect ? (
         <SelectItemsList>
           {options.map((option: SelectItem, i: number) => (
             <SelectItemsListItem

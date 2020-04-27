@@ -1,6 +1,7 @@
 enum Colors {
   GREEN_DARK = '#598B82',
   GREEN_LIGHT = '#C1D1CE',
+  ORANGE = '#F14517',
   ORANGE_DARK = '#F5704D',
   ORANGE_LIGHT = '#FFE0C6',
   BLUE_DARK = '#515EA0',
@@ -16,7 +17,6 @@ enum Colors {
   BLACK = '#000000',
   WHITE = '#FFFFFF',
   DARK_BACKGROUND = '#181818',
-  VALIDATION_ERROR = '#F14517',
 }
 
 export default Colors;

@@ -1,23 +1,17 @@
 import React from 'react';
-import {
-  InputRootContainer,
-  InputContainer,
-  InputWrapper,
-  InputValidationMessageWrapper,
-  InputGroupButton,
-} from './styles';
-import { SendIcon } from '../../icons';
+import { InputRootContainer, InputContainer, InputWrapper, InputValidationMessage, InputGroupButton } from './styles';
+import { SendIcon } from 'shared/icons';
 
 export type InputProps = React.HTMLAttributes<HTMLInputElement> & {
   inputType: string;
   validationState: boolean;
   validationMessage: string;
-  withSend?: boolean;
+  includeSendButton?: boolean;
   onSend?: (e: React.MouseEvent) => void;
 };
 
 const Input: React.FC<InputProps> = ({
-  withSend,
+  includeSendButton,
   inputType,
   validationState,
   validationMessage,
@@ -27,10 +21,15 @@ const Input: React.FC<InputProps> = ({
   return (
     <InputRootContainer>
       <InputContainer>
-        <InputWrapper withSend={withSend} validationState={validationState} type={inputType} {...attrs} />
-        {validationState ? <InputValidationMessageWrapper>{validationMessage}</InputValidationMessageWrapper> : ''}
+        <InputWrapper
+          includeSendButton={includeSendButton}
+          validationState={validationState}
+          type={inputType}
+          {...attrs}
+        />
+        {validationState ? <InputValidationMessage>{validationMessage}</InputValidationMessage> : ''}
       </InputContainer>
-      {withSend ? (
+      {includeSendButton ? (
         <InputGroupButton onClick={onSend}>
           <SendIcon />
         </InputGroupButton>
