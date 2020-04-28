@@ -6,5 +6,17 @@ import LogoWhiteIcon from './LogoWhite';
 import LinkedinIcon from './Linkedin';
 import TwitterIcon from './Twitter';
 import FacebookIcon from './Facebook';
+import BigBoxIcon from './BigBox';
 
-export { SearchIcon, CloseIcon, LogoBlackIcon, BoxIcon, LogoWhiteIcon, LinkedinIcon, TwitterIcon, FacebookIcon };
+// Please keep export items in alphabetical order to reduce number of merge conflicts, also it's easier to read.
+export {
+  BigBoxIcon,
+  BoxIcon,
+  CloseIcon,
+  FacebookIcon,
+  LinkedinIcon,
+  LogoBlackIcon,
+  LogoWhiteIcon,
+  SearchIcon,
+  TwitterIcon,
+};

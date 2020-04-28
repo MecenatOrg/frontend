@@ -9,7 +9,7 @@ export const Navigation = styled.nav`
   ul {
     display: flex;
     align-items: center;
-    ${media.tabletMMax} {
+    ${media.tabletMax} {
       display: none;
     }
     li {
