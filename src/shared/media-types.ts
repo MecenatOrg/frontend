@@ -1,7 +1,8 @@
 enum MediaTypes {
   MOBILE = '576',
-  TABLET_M = '768',
-  TABLET_L = '1024',
+  TABLET = '768',
+  TABLET_L = '992',
+  TABLET_XL = '1024',
   DESKTOP = '1920',
 }
 
@@ -13,10 +14,12 @@ const customMediaQueryMin = (width: MediaTypes): string => `@media (min-width: $
 export const media: { [key: string]: string } = {
   mobileMax: customMediaQueryMax(MediaTypes.MOBILE),
   mobileMin: customMediaQueryMin(MediaTypes.MOBILE),
-  tabletMMax: customMediaQueryMax(MediaTypes.TABLET_M),
-  tabletMMin: customMediaQueryMin(MediaTypes.TABLET_M),
+  tabletMax: customMediaQueryMax(MediaTypes.TABLET),
+  tabletMin: customMediaQueryMin(MediaTypes.TABLET),
   tabletLMax: customMediaQueryMax(MediaTypes.TABLET_L),
   tabletLMin: customMediaQueryMin(MediaTypes.TABLET_L),
+  tabletXLMax: customMediaQueryMax(MediaTypes.TABLET_XL),
+  tabletXLMin: customMediaQueryMin(MediaTypes.TABLET_XL),
   desktopMax: customMediaQueryMax(MediaTypes.DESKTOP),
   desktopMin: customMediaQueryMin(MediaTypes.DESKTOP),
 };

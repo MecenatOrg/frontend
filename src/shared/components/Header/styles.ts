@@ -12,13 +12,13 @@ export const HeaderWrapper = styled.header`
 export const LogoWrapper = styled.a`
   .logo-mobile {
     display: none;
-    ${media.tabletMMax} {
+    ${media.tabletMax} {
       display: block;
     }
   }
   .logo-desktop {
     display: block;
-    ${media.tabletMMax} {
+    ${media.tabletMax} {
       display: none;
     }
   }

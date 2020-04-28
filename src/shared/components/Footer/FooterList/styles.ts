@@ -10,7 +10,7 @@ export const FooterListWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 80px;
-  ${media.tabletMMax} {
+  ${media.tabletMax} {
     flex-flow: row wrap;
     margin-bottom: 0;
     > div {
@@ -43,7 +43,7 @@ export const FooterListHeading = styled.div`
 
 export const FooterListItem = styled.li<StyleProps>`
   padding-bottom: 10px;
-  ${media.tabletMMax} {
+  ${media.tabletMax} {
     ${({ order }: StyleProps): string => `order: ${order || 1}`};
   }
   > a {
@@ -61,7 +61,7 @@ export const FooterListItem = styled.li<StyleProps>`
 
 export const SocialIconWrapper = styled.div`
   text-align: right;
-  ${media.tabletMMax} {
+  ${media.tabletMax} {
     text-align: left;
   }
 `;
