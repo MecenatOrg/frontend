@@ -50,12 +50,12 @@ export const SelectItemsList = styled.div`
 export const SelectItemsListItem = styled.div`
   width: 100%;
   padding: 13px 20px 14px;
-  border-bottom: 1px solid ${Colors.LIGHT};
+  border-bottom: 1px solid ${Colors.GREY_ULTRA_LIGHT};
   ${selectFontStyle};
   color: ${Colors.BLACK};
   cursor: pointer;
   &:hover {
-    background-color: ${Colors.LIGHT};
+    background-color: ${Colors.GREY_ULTRA_LIGHT};
   }
   &:last-child {
     border-bottom: none;
