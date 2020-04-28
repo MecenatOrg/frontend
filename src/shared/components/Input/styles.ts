@@ -8,20 +8,21 @@ type InputStyleProps = {
   validationMessage?: string;
 };
 
-export const InputRootContainer = styled.div`
+const inputDisplayValue = `
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
 `;
 
+export const InputRootContainer = styled.div`
+  ${inputDisplayValue};
+  flex-direction: row;
+`;
+
 export const InputContainer = styled.div`
-  display: flex;
+  ${inputDisplayValue};
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 100%;
 `;
 
 export const InputWrapper = styled.input<InputStyleProps>`
