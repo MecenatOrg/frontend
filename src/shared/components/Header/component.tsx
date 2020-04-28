@@ -36,7 +36,7 @@ const Header: React.FC = () => {
         <Row>
           <Col>
             <HeaderElementsWrapper>
-              <LogoWrapper href="#">
+              <LogoWrapper href="/">
                 <LogoBlackIcon mobile={true} />
                 <LogoBlackIcon mobile={false} />
               </LogoWrapper>

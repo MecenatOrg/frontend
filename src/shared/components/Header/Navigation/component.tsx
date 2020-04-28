@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { MenuItem } from 'shared/types';
 import { Button } from 'shared/components';
 import { ButtonVariant } from 'shared/components/Button/component';
 import { ToggleHandlerType } from 'shared/components/Header/component';
@@ -7,20 +8,15 @@ import { ToggleHandlerType } from 'shared/components/Header/component';
 import { SearchIcon } from 'shared/icons';
 import { Navigation, ToggleMenu, SearchButton, ButtonWrapper } from './styles';
 
-export type NavListItem = {
-  name: string;
-  link: string;
-};
-
 type NavigationProps = {
   isOpenMenu: boolean;
   onToggle(type: ToggleHandlerType): void;
 };
 
 const Header: React.FC<NavigationProps> = ({ onToggle, isOpenMenu }: NavigationProps) => {
-  const navList: NavListItem[] = [
-    { name: 'Знайти проекти', link: '#' },
-    { name: 'Додати проект', link: '/link2' },
+  const navList: MenuItem[] = [
+    { name: 'Знайти проекти', link: '#', id: Math.random() },
+    { name: 'Додати проект', link: '#', id: Math.random() },
   ];
   return (
     <Navigation>
@@ -34,7 +30,7 @@ const Header: React.FC<NavigationProps> = ({ onToggle, isOpenMenu }: NavigationP
       </SearchButton>
       <ul>
         {navList.map(item => (
-          <li key={item.name}>
+          <li key={item.id}>
             <a href={item.link}>{item.name}</a>
           </li>
         ))}
