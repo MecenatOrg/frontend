@@ -1,17 +1,18 @@
 import React from 'react';
 
+import { Size } from 'config/configEnums';
 import { ShapeProps } from './types';
 
 const RectangleOvalToRight: React.FC<ShapeProps> = ({ size }: ShapeProps) => {
   const getWidth = (): number => {
-    if (size === 'large') return 242;
-    if (size === 'medium') return 202;
+    if (size === Size.LARGE) return 242;
+    if (size === Size.MEDIUM) return 202;
     return 170;
   };
 
   const getHeight = (): number => {
-    if (size === 'large') return 276;
-    if (size === 'medium') return 230;
+    if (size === Size.LARGE) return 276;
+    if (size === Size.MEDIUM) return 230;
     return 194;
   };
 

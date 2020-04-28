@@ -19,18 +19,18 @@ export const CartWrapper = styled.div<CartWrapperProps>`
   padding-left: 20px;
 
   div:first-child {
-    ${({ size }): string => (size === 'large' ? 'margin-right: 60px' : '')};
+    ${({ size }: CartWrapperProps): string => (size === Size.LARGE ? 'margin-right: 60px' : '')};
   }
   div:nth-last-child(-n + 2) {
-    ${({ size }): string => (size === 'large' ? `margin-bottom: 0` : '')};
+    ${({ size }: CartWrapperProps): string => (size === Size.LARGE ? `margin-bottom: 0` : '')};
   }
 
   svg {
     position: absolute;
     z-index: -1;
     left: -20px;
-    ${({ size }): string => (size !== 'large' ? 'height: 100%' : '')};
-    ${({ size }): string => (size === 'large' ? 'top: 20px' : '')};
+    ${({ size }: CartWrapperProps): string => (size !== Size.LARGE ? 'height: 100%' : '')};
+    ${({ size }: CartWrapperProps): string => (size === Size.LARGE ? 'top: 20px' : '')};
   }
 
   img {
@@ -38,8 +38,8 @@ export const CartWrapper = styled.div<CartWrapperProps>`
   }
 
   & > :last-child > h3 {
-    ${({ size }): string => (size === 'medium' || 'small' ? 'font-size: 22px' : '')};
-    ${({ size }): string => (size === 'medium' || 'small' ? 'line-height: 30px' : '')};
+    ${({ size }: CartWrapperProps): string => (size === Size.MEDIUM || Size.SMALL ? 'font-size: 22px' : '')};
+    ${({ size }: CartWrapperProps): string => (size === Size.MEDIUM || Size.SMALL ? 'line-height: 30px' : '')};
   }
 
   &:hover {
@@ -56,7 +56,7 @@ export const CartWrapper = styled.div<CartWrapperProps>`
       margin-bottom: 24px;
     }
     div:first-child {
-      ${({ size }): string => (size === 'large' ? 'margin-right: 0' : '')};
+      ${({ size }: CartWrapperProps): string => (size === Size.LARGE ? 'margin-right: 0' : '')};
     }
     svg {
       top: 0%;
@@ -69,21 +69,21 @@ export const ImageWrapper = styled(Media)`
   position: relative;
   z-index: 10;
   margin-bottom: 24px;
-  background: #e5e5e5;
+  background: ${Colors.LIGHT_GREY_BACKGROUND};
 `;
 
 export const CartContent = styled(Media.Body)`
-  & > :not(:last-child) {
-    margin-bottom: 12px;
-  }
   display: flex;
   flex-direction: column;
   width: 100%;
+  & > :not(:last-child) {
+    margin-bottom: 12px;
+  }
 `;
 
 export const CartSubHeader = styled.span<CartSubHeaderProps>`
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
-  ${({ textColor }): string => `color: ${textColor ? textColor : Colors.BLACK};`};
+  ${({ textColor }: CartSubHeaderProps): string => `color: ${textColor ? textColor : Colors.BLACK};`};
 `;

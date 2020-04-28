@@ -16,6 +16,7 @@ enum Colors {
   BLACK = '#000000',
   WHITE = '#FFFFFF',
   DARK_BACKGROUND = '#181818',
+  LIGHT_GREY_BACKGROUND = '#e5e5e5',
 }
 
 export default Colors;

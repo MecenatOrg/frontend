@@ -1,11 +1,12 @@
 import React from 'react';
 
+import { Size } from 'config/configEnums';
 import { ShapeProps } from './types';
 
 const Oval: React.FC<ShapeProps> = ({ size, fill }: ShapeProps) => {
   const getSize = (): number => {
-    if (size === 'large') return 246;
-    if (size === 'medium') return 240;
+    if (size === Size.LARGE) return 246;
+    if (size === Size.MEDIUM) return 240;
     return 193;
   };
 
