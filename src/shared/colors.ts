@@ -6,6 +6,8 @@ enum Colors {
   BLACK = '#000000',
   BLUE_DARK = '#515EA0',
   BLUE_LIGHT = '#CBD7F3',
+  BLUE_NAVY = '#2E63B3',
+  BLUE_NAVY_LIGHT = '#3F71BD',
   GREEN_DARK = '#598B82',
   GREEN_LIGHT = '#C1D1CE',
   GREY = '#575757',

@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import Colors from 'shared/colors';
 import media from 'shared/media-types';
 
+type StyleProps = {
+  isOpenMenu: boolean;
+};
+
 export const Navigation = styled.nav`
   display: flex;
   align-items: center;
@@ -9,9 +13,6 @@ export const Navigation = styled.nav`
   ul {
     display: flex;
     align-items: center;
-    ${media.tabletMax} {
-      display: none;
-    }
     li {
       display: flex;
       align-items: center;
@@ -23,9 +24,16 @@ export const Navigation = styled.nav`
       color: ${Colors.BLACK};
       text-decoration: none;
     }
-    svg {
-      margin-right: 10px;
+  }
+  ${media.tabletLMax} {
+    ul {
+      display: none;
     }
+  }
+  ${media.mobileMax} {
+    flex-grow: 1;
+    justify-content: space-between;
+    padding-left: 26px;
   }
 `;
 
@@ -36,9 +44,29 @@ export const SearchButton = styled.button`
   background-color: transparent;
   color: ${Colors.BLACK};
   font-weight: 500;
+  margin-right: 40px;
+  svg {
+    margin-right: 10px;
+  }
+  ${media.tabletMax} {
+    order: 2;
+  }
+  ${media.mobileMax} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    font-size: 0;
+    line-height: 0;
+    margin-right: 0;
+    svg {
+      margin-right: 0;
+    }
+  }
 `;
 
-export const ToggleMenu = styled.button`
+export const ToggleMenu = styled.button<StyleProps>`
   position: relative;
   display: block;
   width: 24px;
@@ -55,11 +83,25 @@ export const ToggleMenu = styled.button`
     width: 100%;
     height: 2px;
     background-color: ${Colors.BLACK};
+    transition: all 0.25s ease-out;
   }
   &::after {
-    top: 6px;
+    ${({ isOpenMenu }) => `top: ${isOpenMenu ? '11px' : '6px'}; transform: rotate(${isOpenMenu ? '-45deg' : '0'})`};
   }
   &::before {
-    bottom: 6px;
+    ${({ isOpenMenu }) => `bottom: ${isOpenMenu ? '11px' : '6px'}; transform: rotate(${isOpenMenu ? '45deg' : '0'})`};
+  }
+  ${media.tabletMax} {
+    order: 3;
+  }
+`;
+
+export const ButtonWrapper = styled.div`
+  margin-right: 40px;
+  ${media.tabletMax} {
+    order: 1;
+  }
+  ${media.mobileMax} {
+    margin-right: 10px;
   }
 `;

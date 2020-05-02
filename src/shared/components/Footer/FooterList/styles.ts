@@ -53,8 +53,6 @@ export const FooterListItem = styled.li<StyleProps>`
     color: ${Colors.WHITE};
     &:hover {
       opacity: 1;
-      text-decoration: none;
-      font-weight: bold;
     }
   }
 `;

@@ -17,5 +17,11 @@ module.exports = {
   },
   rules: {
     '@typescript-eslint/camelcase': [1, { properties: 'never' }],
+    '@typescript-eslint/explicit-function-return-type': [
+      'error',
+      {
+        allowExpressions: true,
+      },
+    ],
   },
 };

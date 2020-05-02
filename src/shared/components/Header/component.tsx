@@ -3,37 +3,45 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import { LogoBlackIcon } from 'shared/icons';
 
-import { MenuListItem } from './types';
 import Navigation from './Navigation';
 import SearchBar from './SearchBar';
+import Menu from './Menu';
 
-import { HeaderWrapper, LogoWrapper } from './styles';
+import { HeaderWrapper, LogoWrapper, HeaderElementsWrapper } from './styles';
+
+export enum ToggleHandlerType {
+  MENU,
+  SEARCH,
+}
 
 const Header: React.FC = () => {
-  const menuList: MenuListItem[] = [
-    { name: 'Знайти проекти', link: '#' },
-    { name: 'Додати проект', link: '/link2' },
-  ];
   const [isOpenSearch, setIsOpenSearch] = useState(false);
-  const onToggleHandler = (type: string): void => {
-    if (type === 'search') {
-      setIsOpenSearch(!isOpenSearch);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const onToggleHandler = (type: ToggleHandlerType): void => {
+    switch (type) {
+      case ToggleHandlerType.MENU:
+        setIsOpenMenu(!isOpenMenu);
+        break;
+      case ToggleHandlerType.SEARCH:
+        setIsOpenSearch(!isOpenSearch);
+        break;
     }
   };
 
   return (
-    <HeaderWrapper>
+    <HeaderWrapper isOpenMenu={isOpenMenu}>
       <SearchBar isOpenSearch={isOpenSearch} onToggle={onToggleHandler} />
+      <Menu isOpenMenu={isOpenMenu} />
       <Container>
         <Row>
-          <Col xs={5} sm={3}>
-            <LogoWrapper href="#">
-              <LogoBlackIcon mobile={true} />
-              <LogoBlackIcon mobile={false} />
-            </LogoWrapper>
-          </Col>
-          <Col xs={7} sm={9}>
-            <Navigation onToggle={onToggleHandler} menuList={menuList} />
+          <Col>
+            <HeaderElementsWrapper>
+              <LogoWrapper href="/">
+                <LogoBlackIcon mobile={true} />
+                <LogoBlackIcon mobile={false} />
+              </LogoWrapper>
+              <Navigation onToggle={onToggleHandler} isOpenMenu={isOpenMenu} />
+            </HeaderElementsWrapper>
           </Col>
         </Row>
       </Container>
