@@ -69,7 +69,7 @@ export const ImageWrapper = styled(Media)`
   position: relative;
   z-index: 10;
   margin-bottom: 24px;
-  background: ${Colors.LIGHT_GREY_BACKGROUND};
+  background: ${Colors.GREY_ULTRA_LIGHT};
 `;
 
 export const CartContent = styled(Media.Body)`
