@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 import media from 'shared/media-types';
 import Colors from 'shared/colors';
 
@@ -22,7 +23,7 @@ export const HeaderWrapper = styled.header<StyleProps>`
   }
 `;
 
-export const LogoWrapper = styled.a`
+export const LogoWrapper = styled(NavLink)`
   .logo-mobile {
     display: none;
     ${media.tabletMax} {

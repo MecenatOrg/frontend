@@ -4,9 +4,12 @@ import { MenuItem } from 'shared/types';
 import { Button } from 'shared/components';
 import { ButtonVariant } from 'shared/components/Button/component';
 import { ToggleHandlerType } from 'shared/components/Header/component';
+import { Link } from 'react-router-dom';
 
 import { SearchIcon } from 'shared/icons';
 import { Navigation, ToggleMenu, SearchButton, ButtonWrapper } from './styles';
+
+import { routes } from 'Router/path';
 
 type NavigationProps = {
   isOpenMenu: boolean;
@@ -15,8 +18,8 @@ type NavigationProps = {
 
 const Header: React.FC<NavigationProps> = ({ onToggle, isOpenMenu }: NavigationProps) => {
   const navList: MenuItem[] = [
-    { name: 'Знайти проекти', link: '#', id: Math.random() },
-    { name: 'Додати проект', link: '#', id: Math.random() },
+    { name: 'Знайти проекти', link: routes.projects, id: Math.random() },
+    { name: 'Додати проект', link: routes.project, id: Math.random() },
   ];
   return (
     <Navigation>
@@ -31,7 +34,7 @@ const Header: React.FC<NavigationProps> = ({ onToggle, isOpenMenu }: NavigationP
       <ul>
         {navList.map(item => (
           <li key={item.id}>
-            <a href={item.link}>{item.name}</a>
+            <Link to={item.link}>{item.name}</Link>
           </li>
         ))}
       </ul>

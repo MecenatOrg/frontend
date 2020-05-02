@@ -7,6 +7,8 @@ import Navigation from './Navigation';
 import SearchBar from './SearchBar';
 import Menu from './Menu';
 
+import { routes } from 'Router/path';
+
 import { HeaderWrapper, LogoWrapper, HeaderElementsWrapper } from './styles';
 
 export enum ToggleHandlerType {
@@ -36,7 +38,7 @@ const Header: React.FC = () => {
         <Row>
           <Col>
             <HeaderElementsWrapper>
-              <LogoWrapper href="/">
+              <LogoWrapper to={routes.home}>
                 <LogoBlackIcon mobile={true} />
                 <LogoBlackIcon mobile={false} />
               </LogoWrapper>
