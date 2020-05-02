@@ -6,14 +6,11 @@ import history from './history';
 import { routes } from './path';
 
 // * Core components ->
-import { Root } from 'shared/components';
-import { NotFound } from 'shared/components';
-// import { Backdrop } from 'Components/Backdrop';
-// ! This component does not exist yet
-// import { Spinner } from 'shared/components';
+import { Spinner } from 'react-bootstrap';
+import { Root, NotFound, Backdrop } from 'shared/components';
 // * <- Core components
 
-// TODO ADD NEW PAGES
+// TODO: ADD NEW PAGES
 // * Lazy components ->
 // ?  Home Page (default);
 const HomePage = React.lazy(() => import('app/pages/HomePage'));
@@ -27,13 +24,11 @@ const HomePage = React.lazy(() => import('app/pages/HomePage'));
 
 // * <- Lazy components
 
-type RoutesProps = {};
-
 const Routes: React.FC = () => {
   const preloadingComponent = (
-    // <Backdrop overflowAll>
-    <p>Loading...</p>
-    // </Backdrop>
+    <Backdrop show={true}>
+      <Spinner animation="border" variant="warning" />
+    </Backdrop>
   );
 
   return (
@@ -54,7 +49,7 @@ const Routes: React.FC = () => {
               <h1>Projects Page</h1>
             </Route>
             <Route path={routes.project} exact>
-              <HomePage />
+              <h1>Project Page</h1>
             </Route>
             <Route path={'*'} exact>
               <NotFound />

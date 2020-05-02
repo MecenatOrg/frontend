@@ -1,9 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-import HomePage from '../pages/HomePage';
-import { Header, Footer } from 'shared/components';
+import Routes from 'Router/Routes';
 
 import { AppWrapper } from './styles';
 
@@ -11,15 +9,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <AppWrapper>
-        <Header />
-        <Container>
-          <Switch>
-            <Route exact path="/">
-              <HomePage />
-            </Route>
-          </Switch>
-        </Container>
-        <Footer />
+        <Routes />
       </AppWrapper>
     </Router>
   );
