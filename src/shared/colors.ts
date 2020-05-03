@@ -24,7 +24,6 @@ enum Colors {
   YELLOW_DARK = '#FFD167',
   YELLOW_LIGHT = '#FFECB8',
   WHITE = '#FFFFFF',
-  DARK_BACKGROUND = '#181818',
 }
 
 export default Colors;
