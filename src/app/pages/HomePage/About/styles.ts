@@ -72,6 +72,10 @@ export const AboutTextWrapper = styled.div`
         position: absolute;
         bottom: 3px;
         left: 20px;
+        ${media.mobileMax} {
+          bottom: 1px;
+          left: 17px;
+        }
       }
     }
   }
