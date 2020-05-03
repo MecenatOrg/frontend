@@ -54,7 +54,9 @@ export const ProjectsVerifiedWrapper = styled.div`
     animation: ${rotate} 5.3s linear infinite;
   }
   ${media.tabletLMax} {
-    bottom: 35px;
+    bottom: 20px;
+    left: -85px;
+    transform: scale(0.7);
   }
   ${media.mobileMax} {
     display: none;
@@ -74,15 +76,11 @@ export const AboutTextWrapper = styled.div`
     width: 100%;
     span {
       position: relative;
-      svg {
-        position: absolute;
-        bottom: 3px;
-        left: 20px;
-        ${media.mobileMax} {
-          bottom: 1px;
-          left: 17px;
-        }
-      }
+    }
+    svg {
+      position: absolute;
+      bottom: 3px;
+      left: 20px;
     }
   }
   button {
@@ -93,7 +91,15 @@ export const AboutTextWrapper = styled.div`
     padding-top: 0;
   }
   ${media.tabletMax} {
-    padding-top: 40px;
     padding-left: 0;
+    padding-top: 40px;
+  }
+  ${media.mobileMax} {
+    h2 {
+      svg {
+        bottom: 1px;
+        left: 17px;
+      }
+    }
   }
 `;
