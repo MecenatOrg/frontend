@@ -6,6 +6,7 @@ import FacebookIcon from './Facebook';
 import LinkedinIcon from './Linkedin';
 import LogoBlackIcon from './LogoBlack';
 import LogoWhiteIcon from './LogoWhite';
+import ProjectsVerified from './ProjectsVerified';
 import SearchIcon from './Search';
 import TwitterIcon from './Twitter';
 
@@ -18,6 +19,7 @@ export {
   LinkedinIcon,
   LogoBlackIcon,
   LogoWhiteIcon,
+  ProjectsVerified,
   SearchIcon,
   TwitterIcon,
 };

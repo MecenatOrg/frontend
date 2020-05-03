@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+import About from './About';
 import Hero from './Hero';
 
 const HomePage: React.FC = () => {
@@ -10,6 +11,7 @@ const HomePage: React.FC = () => {
         <title>Меценат - Головна сторінка</title>
       </Helmet>
       <Hero />
+      <About />
     </>
   );
 };
