@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProjectsVerified: React.FC = () => (
+const ProjectsVerifiedIcon: React.FC = () => (
   <svg width="217" height="217" viewBox="0 0 217 217" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       fillRule="evenodd"
@@ -23,4 +23,4 @@ const ProjectsVerified: React.FC = () => (
   </svg>
 );
 
-export default ProjectsVerified;
+export default ProjectsVerifiedIcon;

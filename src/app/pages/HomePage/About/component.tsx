@@ -4,7 +4,7 @@ import { H2, Text } from 'shared/Typography';
 import { AboutImg } from 'shared/images';
 import { Button } from 'shared/components';
 import { ButtonVariant } from 'shared/components/Button/component';
-import { ProjectsVerified } from 'shared/icons';
+import { ProjectsVerifiedIcon, OverlayShapeCIcon } from 'shared/icons';
 
 import { AboutWrapper, AboutImgWrapper, AboutTextWrapper, ProjectsVerifiedWrapper } from './styles';
 
@@ -13,12 +13,16 @@ const About: React.FC = () => (
     <AboutImgWrapper>
       <img src={AboutImg} alt="" />
       <ProjectsVerifiedWrapper>
-        <ProjectsVerified />
+        <ProjectsVerifiedIcon />
       </ProjectsVerifiedWrapper>
     </AboutImgWrapper>
     <AboutTextWrapper>
       <H2>
-        Mеценат - <span>це</span> допомога
+        Mеценат -
+        <span>
+          це <OverlayShapeCIcon />
+        </span>
+        допомога
       </H2>
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore

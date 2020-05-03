@@ -12,6 +12,7 @@ const rotate = keyframes`
 `;
 
 export const AboutWrapper = styled.div`
+  position: relative;
   display: flex;
   align-items: flex-start;
   padding: 60px 0 100px;
@@ -67,10 +68,10 @@ export const AboutTextWrapper = styled.div`
     width: 100%;
     span {
       position: relative;
-      &::after {
-        content: '';
-        width: 12px;
-        height: 13px;
+      svg {
+        position: absolute;
+        bottom: 3px;
+        left: 20px;
       }
     }
   }
