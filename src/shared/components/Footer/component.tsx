@@ -1,7 +1,7 @@
 import React from 'react';
-import { FooterWrapper, LogoWrapper, CopyrightWrapper, Copyright } from './styles';
 import { Container } from 'react-bootstrap';
 import { LogoWhiteIcon, BoxIcon } from 'shared/icons';
+import { FooterWrapper, LogoWrapper, CopyrightWrapper, Copyright } from './styles';
 
 import FooterList from './FooterList';
 
