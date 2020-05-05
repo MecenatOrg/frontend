@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+
 import { MenuItem, MenuList } from 'shared/types';
 import { TwitterIcon, LinkedinIcon, FacebookIcon } from 'shared/icons';
+
 import { FooterListWrapper, FooterListHeading, SocialIconWrapper, FooterListItem, SocialIconLink } from './styles';
 
 /*
@@ -21,36 +24,38 @@ const calculateFlexOrder = (index: number, arrayLength: number): number => {
 };
 
 const FooterList: React.FC = () => {
+  const { t } = useTranslation();
+
   const footerLists: Array<MenuList> = [
     {
       id: Math.random(),
-      heading: 'Категорії',
+      heading: t('CATEGORIES'),
       list: [
-        { name: 'Освіта', link: '/', id: Math.random() },
-        { name: 'Діти', link: '/', id: Math.random() },
-        { name: 'Екологія', link: '/', id: Math.random() },
-        { name: 'Війна', link: '/', id: Math.random() },
-        { name: 'Медицина', link: '/', id: Math.random() },
-        { name: 'Мистецтво', link: '/', id: Math.random() },
+        { name: t('EDUCATION'), link: '/', id: Math.random() },
+        { name: t('CHILDREN'), link: '/', id: Math.random() },
+        { name: t('ECOLOGY'), link: '/', id: Math.random() },
+        { name: t('WAR'), link: '/', id: Math.random() },
+        { name: t('MEDICINE'), link: '/', id: Math.random() },
+        { name: t('ART'), link: '/', id: Math.random() },
       ],
     },
     {
       id: Math.random(),
-      heading: 'Про нас',
+      heading: t('ABOUT_US'),
       list: [
-        { name: 'Як це працює', link: '/', id: Math.random() },
-        { name: 'Поради', link: '/', id: Math.random() },
-        { name: 'Кейси', link: '/', id: Math.random() },
-        { name: 'Контакти', link: '/', id: Math.random() },
+        { name: t('HOW_IT_WORKS'), link: '/', id: Math.random() },
+        { name: t('ADVICES'), link: '/', id: Math.random() },
+        { name: t('CASES'), link: '/', id: Math.random() },
+        { name: t('CONTACTS'), link: '/', id: Math.random() },
       ],
     },
     {
       id: Math.random(),
-      heading: 'Проект',
+      heading: t('PROJECT'),
       list: [
-        { name: 'Знайти проект', link: '/', id: Math.random() },
-        { name: 'Додати проект', link: '/', id: Math.random() },
-        { name: 'Критерії відбору проекту', link: '/', id: Math.random() },
+        { name: t('FIND_PROJECT'), link: '/', id: Math.random() },
+        { name: t('ADD_PROJECT'), link: '/', id: Math.random() },
+        { name: t('PROJECT_SELECTION_CRITERIA'), link: '/', id: Math.random() },
       ],
     },
   ];
@@ -71,7 +76,7 @@ const FooterList: React.FC = () => {
         </div>
       ))}
       <div>
-        <FooterListHeading>Підписатись на розсилку</FooterListHeading>
+        <FooterListHeading>{t('SUBSCRIBE')}</FooterListHeading>
         {/*Email Input*/}
         <SocialIconWrapper>
           <SocialIconLink href="/">

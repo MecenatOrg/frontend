@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { MenuItem } from 'shared/types';
 import { Button } from 'shared/components';
@@ -14,9 +15,11 @@ type NavigationProps = {
 };
 
 const Header: React.FC<NavigationProps> = ({ onToggle, isOpenMenu }: NavigationProps) => {
+  const { t } = useTranslation();
+
   const navList: MenuItem[] = [
-    { name: 'Знайти проекти', link: '#', id: Math.random() },
-    { name: 'Додати проект', link: '#', id: Math.random() },
+    { name: t('FIND_PROJECT'), link: '/', id: Math.random() },
+    { name: t('ADD_PROJECT'), link: '/', id: Math.random() },
   ];
   return (
     <Navigation>
@@ -26,7 +29,7 @@ const Header: React.FC<NavigationProps> = ({ onToggle, isOpenMenu }: NavigationP
         }}
       >
         <SearchIcon />
-        Пошук
+        {t('SEARCH')}
       </SearchButton>
       <ul>
         {navList.map(item => (
@@ -36,7 +39,7 @@ const Header: React.FC<NavigationProps> = ({ onToggle, isOpenMenu }: NavigationP
         ))}
       </ul>
       <ButtonWrapper>
-        <Button title="Допомогти" variant={ButtonVariant.PRIMARY_SMALL} />
+        <Button title={t('HELP')} variant={ButtonVariant.PRIMARY_SMALL} />
       </ButtonWrapper>
       <ToggleMenu
         isOpenMenu={isOpenMenu}
