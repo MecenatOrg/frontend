@@ -1,4 +1,5 @@
 import React from 'react';
+import { Trans, useTranslation } from 'react-i18next';
 
 import Colors from 'shared/colors';
 import { H2, Text } from 'shared/Typography';
@@ -13,31 +14,34 @@ import { ProjectsVerifiedIcon, OverlayShapeCIcon } from 'shared/icons';
 
 import { AboutWrapper, AboutImgWrapper, AboutTextWrapper, ProjectsVerifiedWrapper } from './styles';
 
-const About: React.FC = () => (
-  <AboutWrapper>
-    <AboutImgWrapper>
-      <img src={AboutImg} alt="" />
-      <RectangleOvalToRight className="svg--rectangle" size={Size.EXTRA_LARGE} fill={Colors.GREEN_LIGHT} />
-      <ProjectsVerifiedWrapper>
-        <ProjectsVerifiedIcon />
-      </ProjectsVerifiedWrapper>
-    </AboutImgWrapper>
-    <AboutTextWrapper>
-      <H2>
-        Mеценат -
-        <span>
-          це <OverlayShapeCIcon />
-        </span>
-        допомога
-      </H2>
-      <Text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum eu fugiat nulla pariatur.
-      </Text>
-      <Button variant={ButtonVariant.PRIMARY} title="Хочу допомогти" />
-    </AboutTextWrapper>
-  </AboutWrapper>
-);
+const About: React.FC = () => {
+  const { t } = useTranslation();
+
+  return (
+    <AboutWrapper>
+      <AboutImgWrapper>
+        <img src={AboutImg} alt="" />
+        <RectangleOvalToRight className="svg--rectangle" size={Size.EXTRA_LARGE} fill={Colors.GREEN_LIGHT} />
+        <ProjectsVerifiedWrapper>
+          <ProjectsVerifiedIcon />
+        </ProjectsVerifiedWrapper>
+      </AboutImgWrapper>
+      <AboutTextWrapper>
+        <H2>
+          <Trans i18nKey="about.HEADING">
+            Mеценат -
+            <span>
+              це
+              <OverlayShapeCIcon />
+            </span>
+            допомога
+          </Trans>
+        </H2>
+        <Text>{t('about.TEXT')}</Text>
+        <Button variant={ButtonVariant.PRIMARY} title={t('WANT_TO_HELP')} />
+      </AboutTextWrapper>
+    </AboutWrapper>
+  );
+};
 
 export default About;
