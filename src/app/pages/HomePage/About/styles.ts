@@ -25,8 +25,18 @@ export const AboutWrapper = styled.div`
 export const AboutImgWrapper = styled.div`
   position: relative;
   img {
+    position: relative;
     display: block;
     margin-left: 30px;
+    z-index: 2;
+  }
+  .svg--rectangle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    margin: auto;
+    z-index: 1;
   }
   ${media.tabletLMax} {
     width: 45%;
@@ -35,12 +45,22 @@ export const AboutImgWrapper = styled.div`
       margin-left: 0;
       max-width: 100%;
     }
+    .svg--rectangle {
+      width: calc(100% - 40px);
+      height: calc(100% - 40px);
+      left: -20px;
+    }
   }
   ${media.tabletMax} {
     width: 100%;
     img {
       margin-right: auto;
       margin-left: auto;
+    }
+    .svg--rectangle {
+      width: calc(100% - 30px);
+      height: calc(100% - 30px);
+      left: -15px;
     }
   }
 `;
@@ -49,10 +69,8 @@ export const ProjectsVerifiedWrapper = styled.div`
   position: absolute;
   bottom: 85px;
   left: -65px;
-  svg {
-    cursor: pointer;
-    animation: ${rotate} 5.3s linear infinite;
-  }
+  z-index: 3;
+  animation: ${rotate} 5.3s linear infinite;
   ${media.tabletLMax} {
     bottom: 20px;
     left: -85px;
@@ -76,11 +94,11 @@ export const AboutTextWrapper = styled.div`
     width: 100%;
     span {
       position: relative;
-    }
-    svg {
-      position: absolute;
-      bottom: 3px;
-      left: 20px;
+      & > svg {
+        position: absolute;
+        bottom: 3px;
+        left: 20px;
+      }
     }
   }
   button {
@@ -96,9 +114,11 @@ export const AboutTextWrapper = styled.div`
   }
   ${media.mobileMax} {
     h2 {
-      svg {
-        bottom: 1px;
-        left: 17px;
+      span {
+        & > svg {
+          bottom: 1px;
+          left: 17px;
+        }
       }
     }
   }
