@@ -1,0 +1,39 @@
+{
+  "ABOUT_US": "Про нас",
+  "ADD_PROJECT": "Додати проект",
+  "ADVICES": "Поради",
+  "ART": "Мистецтво",
+  "CASES": "Кейси",
+  "CATEGORIES": "Категорії",
+  "CHILDREN": "Діти",
+  "CONTACTS": "Контакти",
+  "ECOLOGY": "Екологія",
+  "EDUCATION": "Освіта",
+  "FIND_PROJECT": "Знайти проект",
+  "HELP": "Допомогти",
+  "HOW_IT_WORKS": "Як це працює",
+  "MEDICINE": "Медицина",
+  "PROJECT": "Проект",
+  "PROJECT_SELECTION_CRITERIA": "Критерії відбору проекту",
+  "SEARCH": "Пошук",
+  "SUBSCRIBE": "Підписатись на розсилку",
+  "WANT_TO_HELP": "Хочу допомогти",
+  "WAR": "Війна",
+  "about": {
+    "HEADING": "Mеценат - <1>це <1><0></0></1></1> допомога",
+    "TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum eu fugiat nulla pariatur."
+  },
+  "footer": {
+    "COPYRIGHT": "(c) 2020. МЕЦЕНАТ"
+  },
+  "hero": {
+    "DESCRIPTION": "Ви можете знайти проект, який підходить вам ідеально, і дізнатися, як ваша компанія може підтримати його.",
+    "HEADING": "Соціальні та благодійні ініціативи України"
+  },
+  "pageTitle": {
+    "HOME_PAGE": "Меценат - Головна сторінка"
+  },
+  "searchBar": {
+    "PLACEHOLDER": "що вас цiкавить?"
+  }
+}
