@@ -12,13 +12,15 @@ const App: React.FC = () => {
     <Router>
       <AppWrapper>
         <Header />
-        <Container>
-          <Switch>
-            <Route exact path="/">
+
+        <Switch>
+          <Route exact path="/">
+            <Container>
               <HomePage />
-            </Route>
-          </Switch>
-        </Container>
+            </Container>
+          </Route>
+        </Switch>
+
         <Footer />
       </AppWrapper>
     </Router>
