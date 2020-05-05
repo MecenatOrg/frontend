@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Colors from 'shared/colors';
+
 import { Size } from 'config/configEnums';
 import { ShapeProps } from './types';
 
@@ -31,7 +33,7 @@ const RectangleOvalToRight: React.FC<ShapeProps> = ({ size, fill, className }: S
         fillRule="evenodd"
         clipRule="evenodd"
         d="M0 0H170V194H0C0 194 11.1027 119.828 11.1027 81.573C11.1027 43.3184 0 0 0 0Z"
-        fill={fill ? fill : '#FFD167'}
+        fill={fill || Colors.YELLOW_DARK}
       />
     </svg>
   );
