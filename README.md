@@ -1,4 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## General
+
+Master `[master branch]` latest build is available on https://staging.mecenat.com.ua/ <br />
+
+Development `[develop branch]` latest build is available on https://development.mecenat.com.ua/
+
 
 ## Available Scripts
 
