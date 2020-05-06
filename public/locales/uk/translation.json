@@ -35,5 +35,10 @@
   },
   "searchBar": {
     "PLACEHOLDER": "що вас цiкавить?"
-  }
+  },
+  "ALL_PROJECTS": "Всі проекти",
+  "COVID": "COVID-19",
+  "PROJECTS_0": "{{count}} проект",
+  "PROJECTS_1": "{{count}} проекти",
+  "PROJECTS_2": "{{count}} проектів"
 }
