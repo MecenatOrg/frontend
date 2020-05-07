@@ -1,4 +1,4 @@
-name: Upload Website
+name: Development web publishment
 
 on:
   push:
@@ -17,8 +17,6 @@ jobs:
     - run: npm install
     - run: npm run build
     - uses: jakejarvis/s3-sync-action@master
-      with:
-        args: --acl public-read --follow-symlinks --delete
       env:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_DEVELOP}}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
