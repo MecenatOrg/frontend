@@ -1,4 +1,4 @@
-name: Staging web publishment.
+name: Staging web publishment. 
 
 on:
   push:
