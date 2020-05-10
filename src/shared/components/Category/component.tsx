@@ -2,6 +2,7 @@ import React from 'react';
 import { CategoryWrapper, TitleWrapper, CountWrapper, IconWrapper } from './styles';
 
 export type CategoryProps = {
+  id?: number;
   title: string;
   icon: string;
   link: string;

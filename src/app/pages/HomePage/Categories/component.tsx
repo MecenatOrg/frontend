@@ -9,36 +9,42 @@ const Categories: React.FC = () => {
   const { t } = useTranslation();
   const categoriesList: Array<CategoryProps> = [
     {
+      id: Math.random(),
       title: t('EDUCATION'),
       icon: EducationIcon,
       count: t('PROJECTS', { count: 43 }),
       link: '/',
     },
     {
+      id: Math.random(),
       title: t('COVID'),
       icon: CovidIcon,
       count: t('PROJECTS', { count: 1 }),
       link: '/',
     },
     {
+      id: Math.random(),
       title: t('ECOLOGY'),
       icon: EcoIcon,
       count: t('PROJECTS', { count: 5 }),
       link: '/',
     },
     {
+      id: Math.random(),
       title: t('CHILDREN'),
       icon: ChildrenIcon,
       count: t('PROJECTS', { count: 43 }),
       link: '/',
     },
     {
+      id: Math.random(),
       title: t('ART'),
       icon: ArtIcon,
       count: t('PROJECTS', { count: 2 }),
       link: '/',
     },
     {
+      id: Math.random(),
       title: t('ALL_PROJECTS'),
       icon: AllProjectsIcon,
       link: '/',
@@ -46,8 +52,8 @@ const Categories: React.FC = () => {
   ];
   return (
     <Row>
-      {categoriesList.map((category: CategoryProps, index) => (
-        <Col md={4} key={index}>
+      {categoriesList.map((category: CategoryProps) => (
+        <Col md={4} key={category.id}>
           <Category {...category} />
         </Col>
       ))}
