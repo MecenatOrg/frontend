@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import media from 'shared/media-types';
 import Colors from '../../colors';
 
-export const CategoryWrapper = styled.div`
+export const CategoryWrapper = styled.a`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -18,6 +18,8 @@ export const CategoryWrapper = styled.div`
   cursor: pointer;
   &:hover {
     box-shadow: 0 20px 30px rgba(233, 229, 221, 0.6);
+    text-decoration: none;
+    color: ${Colors.BLACK};
   }
   ${media.mobileMax} {
     height: 120px;

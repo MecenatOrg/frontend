@@ -1,15 +1,16 @@
 import React from 'react';
 import { CategoryWrapper, TitleWrapper, CountWrapper, IconWrapper } from './styles';
 
-type CategoryProps = {
+export type CategoryProps = {
   title: string;
-  count?: string;
   icon: string;
+  link: string;
+  count?: string;
 };
 
-const Category: React.FC<CategoryProps> = ({ title, count, icon }: CategoryProps) => {
+const Category: React.FC<CategoryProps> = ({ title, count, icon, link }: CategoryProps) => {
   return (
-    <CategoryWrapper>
+    <CategoryWrapper href={link}>
       <TitleWrapper>{title}</TitleWrapper>
       <CountWrapper>{count}</CountWrapper>
       <IconWrapper>
