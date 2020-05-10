@@ -4,6 +4,30 @@ Master `[master branch]` latest build is available on https://staging.mecenat.co
 
 Development `[develop branch]` latest build is available on https://development.mecenat.com.ua/
 
+## Code style
+
+https://github.com/MecenatOrg/frontend/wiki/Code-style
+
+## Contribution
+
+### Commit and branch name
+
+**commit** - _feat(/fix/refactor/revert/doc): add new feature_
+
+e.g. `fix: repair broken navigation on mobile`
+
+**branch** - _feat/my-feature_
+
+e.g. `feat/small-card`
+
+### After PR is approved
+
+1) Choose `squash and merge` in select dropdown
+
+2) Put correct PR name and clean-up description
+
+3) Merge to `master`. Then merge `master` to `develop` branch to keep it up-to-date
+
 ## Available Scripts
 
 In the project directory, you can run:
