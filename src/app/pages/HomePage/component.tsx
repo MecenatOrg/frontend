@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import About from './About';
 import Hero from './Hero';
+import Categories from './Categories';
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation();
@@ -14,6 +15,7 @@ const HomePage: React.FC = () => {
         <title>{t('pageTitle.HOME_PAGE')}</title>
       </Helmet>
       <Hero />
+      <Categories />
       <About />
     </>
   );
