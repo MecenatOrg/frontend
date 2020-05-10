@@ -4,7 +4,6 @@ Master `[master branch]` latest build is available on https://staging.mecenat.co
 
 Development `[develop branch]` latest build is available on https://development.mecenat.com.ua/
 
-
 ## Available Scripts
 
 In the project directory, you can run:
