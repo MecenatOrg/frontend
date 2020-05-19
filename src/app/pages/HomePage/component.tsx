@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import About from './About';
 import Hero from './Hero';
 import Categories from './Categories';
+import ContactForm from './ContactForm';
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation();
@@ -17,6 +18,7 @@ const HomePage: React.FC = () => {
       <Hero />
       <Categories />
       <About />
+      <ContactForm />
     </>
   );
 };
