@@ -31,8 +31,8 @@
   "contactForm": {
     "HEADING": "Залиште Вашi контакти i ми обов’язково зав’яжемося з вами найближчим часом",
     "NAME_PLACEHOLDER": "Ім'я",
-    "THEME_PLACEHOLDER": "Тема",
-    "SEND": "Надiслати"
+    "SEND": "Надiслати",
+    "THEME_PLACEHOLDER": "Тема"
   },
   "footer": {
     "COPYRIGHT": "(c) 2020. МЕЦЕНАТ"
