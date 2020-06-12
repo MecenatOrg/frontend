@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Colors from 'shared/colors';
+import media from 'shared/media-types';
 
 type SelectProps = {
   isOpenedSelect: boolean;
@@ -20,15 +21,19 @@ const dropdownTransformRotate = `
 export const SelectWrapper = styled.div<SelectProps>`
   position: relative;
   background-color: ${Colors.WHITE};
-  padding: 14px 22px 13px 20px;
+  padding: 13px 22px 12px 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
   overflow: visible;
+  margin-bottom: 14px;
   border: 1px solid ${({ isOpenedSelect }: SelectProps): string => (isOpenedSelect ? Colors.BLACK : 'transparent')};
   ${({ isOpenedSelect }: SelectProps): string => (isOpenedSelect ? dropdownTransformRotate : '')};
+  ${media.mobileMax} {
+    height: 54px;
+  }
 `;
 export const SelectedWrapper = styled.span`
   ${selectFontStyle};
@@ -45,6 +50,7 @@ export const SelectItemsList = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   background-color: ${Colors.WHITE};
+  z-index: 1;
 `;
 
 export const SelectItemsListItem = styled.div`

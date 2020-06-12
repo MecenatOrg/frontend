@@ -52,7 +52,6 @@ export const InputWrapper = styled.input<InputStyleProps>`
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    max-width: 335px;
   }
 `;
 
