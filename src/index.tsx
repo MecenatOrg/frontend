@@ -8,9 +8,10 @@ import './config/reset.scss';
 import './i18n';
 
 import App from 'app/App';
+import Preloader from 'shared/components/Preloader';
 
 ReactDOM.render(
-  <Suspense fallback="loading">
+  <Suspense fallback={<Preloader />}>
     <Provider store={configureStore()}>
       <App />
     </Provider>
