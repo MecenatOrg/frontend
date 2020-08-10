@@ -3,6 +3,7 @@
  * e.g. ORANGE_ULTRA_LIGHT, not PLACEHOLDER
  * */
 enum Colors {
+  AQUAMARINE_DARK = '#BDD2CE',
   BLACK = '#000000',
   BLUE_DARK = '#515EA0',
   BLUE_LIGHT = '#CBD7F3',
@@ -11,6 +12,7 @@ enum Colors {
   GREEN_DARK = '#598B82',
   GREEN_LIGHT = '#C1D1CE',
   GREY = '#575757',
+  GREY_BORDER = '#D3D3D3',
   GREY_DARK = '#181818',
   GREY_LIGHT = '#B1B1B1',
   GREY_ULTRA_DARK = '#090909',

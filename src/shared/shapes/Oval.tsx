@@ -3,7 +3,7 @@ import React from 'react';
 import { Size } from 'config/configEnums';
 import { ShapeProps } from './types';
 
-const Oval: React.FC<ShapeProps> = ({ size, fill }: ShapeProps) => {
+const Oval: React.FC<ShapeProps> = ({ size, fill, className }: ShapeProps) => {
   const getSize = (): number => {
     if (size === Size.LARGE) return 246;
     if (size === Size.MEDIUM) return 240;
@@ -11,7 +11,14 @@ const Oval: React.FC<ShapeProps> = ({ size, fill }: ShapeProps) => {
   };
 
   return (
-    <svg width={getSize()} height={getSize()} viewBox="0 0 193 193" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      width={getSize()}
+      height={getSize()}
+      viewBox="0 0 193 193"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"

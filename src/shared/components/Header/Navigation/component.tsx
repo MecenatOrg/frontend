@@ -18,7 +18,7 @@ const Header: React.FC<NavigationProps> = ({ onToggle, isOpenMenu }: NavigationP
   const { t } = useTranslation();
 
   const navList: MenuItem[] = [
-    { name: t('FIND_PROJECT'), link: '/', id: Math.random() },
+    { name: t('FIND_PROJECT'), link: '/find-project', id: Math.random() },
     { name: t('ADD_PROJECT'), link: '/', id: Math.random() },
   ];
   return (
