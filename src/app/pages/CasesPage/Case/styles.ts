@@ -12,6 +12,11 @@ type ImageWrapperProps = {
 
 export const CaseWrapper = styled.div`
   display: flex;
+  .case-link {
+    color: inherit;
+    text-decoration: inherit;
+    width: 100%;
+  }
   .case-image {
     width: 100%;
     z-index: 1;
@@ -29,7 +34,7 @@ export const CaseWrapper = styled.div`
         }
         .case-image {
           height: 370px;
-          width: 50%;
+          width: 100%;
           z-index: 1;
         }
         .svg-rounded-rectangle {
@@ -48,7 +53,7 @@ export const CaseWrapper = styled.div`
           flex-direction: column;
           padding: 30px 0;
           .case-image {
-            height: 400px;
+            height: 300px;
           }
           > div {
             width: 100%;
@@ -134,7 +139,6 @@ export const CaseWrapper = styled.div`
         }
         ${media.mobileMax} {
           width: 100%;
-
         }
       `;
     }

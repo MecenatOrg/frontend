@@ -1,16 +1,31 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
-
 import HomePage from '../pages/HomePage';
 import { Header, Footer } from 'shared/components';
-
 import { AppWrapper } from './styles';
 import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { createHttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import CasesPage from 'app/pages/CasesPage';
+import CaseDetails from 'app/pages/CasesPage/CaseDetails';
+
+export interface CaseDetailsProps {
+  match: {
+    params: {
+      id: string;
+    };
+  };
+}
+
+export interface CasesPageProps {
+  match: {
+    params: {
+      tag: string;
+    };
+  };
+}
 
 const App: React.FC = () => {
   const httpLink = createHttpLink({
@@ -36,12 +51,25 @@ const App: React.FC = () => {
               </Container>
             </Route>
             <Route exact path="/find-project">
-              <Container>
-                <CasesPage />
-              </Container>
+              <Container></Container>
             </Route>
+            <Route
+              path="/project/:id"
+              render={(props: CaseDetailsProps) => (
+                <Container>
+                  <CaseDetails id={parseInt(props.match.params.id, 10)} />
+                </Container>
+              )}
+            />
+            <Route
+              path="/projects/:tag"
+              render={(props: CasesPageProps) => (
+                <Container>
+                  <CasesPage tag={props.match.params.tag} />
+                </Container>
+              )}
+            />
           </Switch>
-
           <Footer />
         </AppWrapper>
       </Router>
