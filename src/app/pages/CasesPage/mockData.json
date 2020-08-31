@@ -5,53 +5,61 @@
       "tags": ["covid-19", "covid-19"],
       "title": "10 000 комплектів костюмів захисту медпрацівників закуповує Roshen",
       "textPreview": "Будь ласка, поділіться цією інформацією з тими, кого вона може стосуватися.",
-      "variant": "LARGE"
+      "variant": "LARGE",
+      "id": 0
     },
     {
       "imgUrl": "https://tk.media/storage/uploads/articles/1200x675/7/7248-article20200320130327.jpg",
       "tags": ["covid-19"],
       "title": "BOLT та UBER заявили, що готовi перевозити медикiв у Києві безплатно",
       "textPreview": "Служби таксі Bolt та Uber висловили готовність безплатно перевозити медпрацівників у столиці.",
-      "variant": "MEDIUM"
+      "variant": "MEDIUM",
+      "id": 1
     },
     {
       "imgUrl": "https://24tv.ua/resources/photos/news/202003/1303111.jpg?1585035550000",
       "tags": ["covid-19"],
       "title": "Lifecell наразовує безкоштовні 20 ГБ та 1500 хвилин для медиків",
       "textPreview": "Lifecell наразовує безкоштовні 20 ГБ та 1500 хвилин для медиків",
-      "variant": "MEDIUM"
+      "variant": "MEDIUM",
+      "id": 2
     },
     {
       "imgUrl": "https://privatblog.com.ua/images/Novosti/Petro_Krumhanzl.jpg",
       "tags": ["covid-19"],
       "title": "ПриватБанк виділив 1 млн євро на поставку українським лікарням 28 ШВЛ та іншого обладнання",
-      "variant": "SMALL"
+      "variant": "SMALL",
+      "id": 3
     },
     {
       "imgUrl": "https://s.mind.ua/img/forall/a/202089/40.png?1594207754",
       "tags": ["covid-19"],
       "title": "Компанія 'Дарниця' та Zagoriy Foundation придбали Апарати штучної вентиляції легень",
-      "variant": "SMALL"
+      "variant": "SMALL",
+      "id": 4
     },
     {
       "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIMrEZ2lvaZeOE_MPQEFqHqXmbROVbJYrPJQ&usqp=CAU",
       "tags": ["covid-19"],
       "title": "SoftServe скерує 10 млн гривень на медичні потреби у боротьбі з коронавірусом",
-      "variant": "SMALL"
+      "variant": "SMALL",
+      "id": 5
     },
     {
       "imgUrl": "https://np.pl.ua/wp-content/uploads/2019/05/pryvat-1024x682.jpg",
       "tags": ["covid-19", "ПриватБанк"],
       "title": "ПриватБанк виділив 1 млн євро на поставку українським лікарням 28 ШВЛ та іншого обладнання",
       "textPreview": "ПриватБанк виділив 1 млн євро на поставку українським лікарням 28 апаратів штучної вентиляції легенів та іншого необхідного для подолання наслідків епідемії коронавирусу обладнання.",
-      "variant": "MEDIUM"
+      "variant": "MEDIUM",
+      "id": 6
     },
     {
       "imgUrl": "https://itvua.tv/wp-content/uploads/2020/04/photoeditorsdk-export-2020-04-23T150108.392.png",
       "tags": ["covid-19"],
       "title": "Mafia та Tarantino Family виявили готовність доставляти безкоштовні обіди лікарям у Києві.",
       "textPreview": "Мережі закладів громадського харчування Mafia та Tarantino Family виявили готовність доставляти",
-      "variant": "MEDIUM"
+      "variant": "MEDIUM",
+      "id": 7
     }
   ]
 }
